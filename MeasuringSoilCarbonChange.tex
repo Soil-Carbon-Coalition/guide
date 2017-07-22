@@ -1,0 +1,1327 @@
+\documentclass[11pt,letterpaper,oneside,onecolumn]{memoir}
+\usepackage{utopia,graphicx,textcomp,makeidx,lettrine,color,endnotes,wrapfig}
+\usepackage[small]{caption}
+\widowpenalty = 8000
+\clubpenalty = 2000
+\hyphenpenalty=1000
+\linespread{1.20}
+\sloppy
+
+
+\makeindex
+
+%LAYOUT
+\settypeblocksize{9.2in}{6in}{*}
+\setulmargins{.8in}{*}{*}
+\setlrmargins{*}{*}{*}
+\setheaderspaces{*}{.25in}{*}
+\checkandfixthelayout
+
+
+\definecolor{shadecolor}{gray}{0.94}
+
+
+\begin{document}
+\renewcommand{\captionfont}{\footnotesize}
+
+
+\frontmatter
+\pagestyle{empty}
+
+%TITLE
+
+
+\begin{center}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{pics/carbonmethodtitle.pdf}
+\end{figure}
+
+\Large
+\bfseries
+Peter Donovan
+\vspace*{3em}
+\fontseries{m}
+\footnotesize
+
+
+version: October 2013
+\begin{figure}[h]
+\centering
+\includegraphics[width = 1in]{pics/creativecommons1.png}
+\end{figure}
+
+This guide can be freely copied and adapted,\\with attribution, no commercial use, and\\derivative works similarly licensed.
+\end{center}
+
+
+\newpage
+\thispagestyle{empty}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0em}
+\normalsize
+\setlength{\epigraphwidth}{4in}
+\setlength{\epigraphrule}{0pt}
+\epigraphfontsize{\small}
+\setlength{\beforechapskip}{0em}
+
+
+\tableofcontents*
+\clearpage
+
+\chapter{What this guide is about,\\and how to use it}
+
+\epigraph{Do civilizations fall because the soil fails to produce---or does a soil fail only when the people living on it no longer know how to manage their civilization?}{Charles Kellogg, ``Soil and Society''}
+
+\noindent This short guide is for people who are interested in the possibilities of turning atmospheric carbon into soil carbon. It is about gauging fundamental biosphere function at specific locations. It is about monitoring: why, how, and what.
+
+Most previous writings on the subject have treated the measurement of soil carbon primarily as a technical issue, requiring a high level of knowledge and expertise, and were focused on verifying greenhouse gas ``offsets'' or selling carbon credits, either in existing or anticipated markets.
+
+\textbf{This guide is different.} Soil carbon measurement is as much a social issue, involving beliefs and attitudes, as it is a technical one. This guide does not offer approved methods for verifying greenhouse gas ``offsets.'' Nor does it contain specific advice about which agricultural practices, technologies, or species might be best at building carbon in the soil, or predictions about the global effects of such practices. However, the monitoring practices outlined in this guide will be useful in developing site-specific answers to these questions.
+
+There are many contexts and ways of thinking about soil carbon, and different perceptions on its importance. How you measure something depends on your purpose, and this guide aims to accommodate a spectrum of purposes. Are you wanting to know if your lawn, farm, or ranch is turning atmospheric carbon dioxide into water-holding, fertility-enhancing soil organic matter, or the reverse? Are you wanting to show what's possible with management? Are you trying to convince yourself, or others, that the changes you are working toward with your land management are having an impact on soil carbon?
+
+Much of world agriculture has long depended on purchased inputs of nitrogen, potassium, and phosphorus. Carbon, along with oxygen a principal dry-weight constituent of crop residue and manure, has typically been regarded as a waste product and a disposal problem, to be dumped somewhere else, or burned.
+
+More and more people have been pointing out that soil carbon ``sequestration'' could offset fossil fuel emissions, with plenty of other benefits besides. It's no surprise that there's resistance, power struggles, and confusion around the increasing emphasis on soil carbon. There has been lots of research and prediction, but very little in the way of monitoring local changes over time, and relatively little change in agricultural incentives or policy.
+
+Government and agricultural experts have been saying that soil carbon is too hard or too expensive to measure because of its variability and complexity, and that the only practical way to get a handle on what is happening with carbon in soils, or to design the proper incentives, is computer modeling based on standardized agricultural practices, aided by remote sensing.
+
+This guide aims at a different approach, which has been developed for the Soil Carbon Challenge (see page \pageref{challenge}). Variability and complexity are not the enemy, but the raw materials for creativity and innovation, for enhancing biosphere functions and letting the solar-powered plants, microbes, and animals do more of the work.
+
+This guide attempts to cut through some of the confusion and technical trappings that have accumulated around the subject of soil carbon, soil carbon change, and its measurement. It attempts to provide a monitoring method that is both flexible---that can be adapted to a variety of purposes and situations---and practical.
+
+Depending on your purpose, measuring change in soil carbon need not be difficult, and it need not cost much. The methods described here will enable you to measure change in soil carbon with accuracy and confidence, using hand tools and established laboratories for accurate soil analysis. For a quick overview of what is involved, take a look at the checklist on page \pageref{checklist}.
+
+Even if you don't want to measure soil carbon change yourself, this guide will help you understand the process and some of what is at stake.
+
+In developing this guide (an ongoing process) I am indebted to many dedicated and hardworking people, who have both taught me some possibilities about measuring soil carbon, and have helped me understand the questions, methods, possibilities, contexts, and limitations both of the soil carbon opportunity, and in our ways of thinking about it. In addition, the approach and methods advocated here owe much to previous publications, such as Ellert, Janzen, and Entz 2002, and most of which are listed in the references.
+
+\vspace{1em}
+\hfill Peter Donovan
+
+\hfill soilcarboncoalition.org
+
+
+\mainmatter
+\pagestyle{myheadings}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\makeevenhead{myheadings}{\thepage}{\footnotesize{Measuring soil carbon change}}{}
+\makeoddhead{myheadings}{}{\footnotesize{Measuring soil carbon change: A flexible, practical, local method}}{\thepage}
+
+
+\makechapterstyle{mybook}{
+    \renewcommand\chaptitlefont{\normalfont\Huge\bfseries\raggedright}
+    \setlength{\beforechapskip}{3em}
+    \renewcommand{\printchaptername}{}
+    \renewcommand\chapternamenum{}
+
+    \renewcommand\printchapternum{%
+    \makebox[\textwidth][r]{\hspace{0pt}%
+    \resizebox{!}{6ex}{\chapnamefont\bfseries\thechapter}}}
+    \renewcommand\afterchapternum{\par\hspace{1.5cm}\hrule\vskip\midchapskip}
+}
+
+\chapterstyle{mybook}
+
+\chapter{The work of the biosphere}
+
+\epigraph{Life is the most powerful geologic force.}{Vladimir Vernadsky}
+
+\noindent In the 1920s, the Russian geochemist Vernadsky recognized that the composition of the atmosphere results from the metabolisms and choices of the biosphere's self-motivated and autonomous organisms, from bacteria to humans.
+
+At the time, there was little demand for this kind of understanding. But it is increasingly obvious that the decline in biosphere function worldwide is accelerating. The composition of the atmosphere is changing, with reduced transparency to the radiation of heat into space. With atmospheric change comes increasing acidity in the oceans.
+
+\section{Technology}
+
+\epigraph{Institutions will try to preserve the problem to which they are the solution.}{Clay Shirky}
+
+\noindent Though we may recognize our dependence on the biosphere, we tend to view it as a somewhat static environment, vulnerable to our greed and technology, in need of protection. The problem-solving environmentalism of the last two generations has worked on protecting nature from harm and pollution: regulating, limiting, and changing our technology.
+
+But it's not working very well. Even ceasing to burn fossil fuels altogether won't solve the atmospheric carbon issue.
+
+The biosphere is the sum of all the living and the dead. It doesn't just sit there looking pretty, wild, or vulnerable. It does work, a lot of it. In addition to the enormous deposits of fossil fuels whose oxidation currently powers our civilization, the biosphere's r\'{e}sum\'{e} includes the calcium carbonate rocks that cover a tenth of the earth's surface, banded iron ore formations that supply our steel, much of ocean chemistry, soils that feed the world, peat formations, and the composition of the atmosphere. Current ``responsibilities'' include feeding everybody, capturing and holding soil moisture for land dwellers, and all the rest of what are called ecosystem services.
+
+The issue is not just technology, though it plays a large role. The issue is that, over vast areas of the world, \textbf{the biosphere is not doing enough work.} With livestock confined, and crop monocultures dependent on fossil energy to maintain them, too many of the animals are in prison, too many of the plants are on welfare, and too many of the microbes are dead.
+
+Work is force over distance or force against resistance, getting things done. Most of the biosphere's work is done through the chemistry of photosynthesis. Solar powered, this work converts inert carbon dioxide into food for all life.
+
+\section{The carbon cycle}
+
+\epigraph{Humus plays a leading part in the storage of energy of solar origin on the surface of the earth.}{Selman Waksman, \textit{Humus} (1936)}
+
+\noindent The pattern and process of this work is the carbon cycle. Carbon is life and food, and moves from atmosphere to plants and soils and back in a grand cycle that is sometimes called the circle of life. This circle encompasses both the living and the dead. The biosphere, idled as it is, still moves bout 9 times the carbon, and does 9 times the work, of all fossil fuel burning.\endnote{Annual Net Primary Production (NPP) for the United States, average of years 2000 through 2006, is about 3.273338 petagrams or gigatons (billion metric tons) of carbon (Maosheng Zhao, personal communication, October 2007). For data on terrestrial net primary production  see Zhao, M., F. A. Heinsch, R. R. Nemani, and S. W. Running, Improvements of the MODIS terrestrial gross and net primary production global data set, \textit{Remote Sensing of Environment} 95: 164--176 (2005). \\ \hspace*{1em}Since 1 g of NPP carbon represents $3.9 \times 10^{4}$ joules (PowerPoint at http://tinyurl.com/35fagm), the net primary production of the United States represents an energy capture of $1.276 \times 10^{20}$ joules or 128 exajoules. (Sven Jorgensen in his \textit{Towards a Thermodynamic Theory for Ecological Systems}, Elsevier 2004, uses the figure $4.2 \times 10^{4}$ joules per gram.) By contrast, U.S. use of all types of industrial, transport, and thermal power in 2006, minus about 3\% of biomass energy, was 96.3 quadrillion BTUs (Energy Information Administration, November 2007 monthly review, accessible from http://www.eia.doe.gov/emeu/aer/overview.html). Multiplied by the conversion factor of 1,055, this converts to $1.02 \times 10^{20}$ joules or 102 exajoules. So current photosynthesis, in the United States, is about 25\% more than energy use that is not tied to current photosynthesis. \\ \hspace*{1em}Worldwide, annual NPP is probably about 110 Gt C, counting the oceans. World energy use for 2004 was estimated at 447 quadrillion BTUs (http://www.eia.doe.gov/oiaf/ieo/world.html). Converting both figures to joules as previously, world NPP comes to $42.9 \times 10^{20}$ joules or 4,290 exajoules, whereas energy use is $4.71 \times 10^{20}$ joules or 471 exajoules. Worldwide, net current photosynthesis represents about 9 times as much as other human energy consumption.}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{pics/carboncycle.pdf}
+\caption{The major flows of carbon in the biosphere. Fossil fuel burning (far left) represents only about 4 percent of the annual flux of carbon dioxide to the atmosphere. The geological carbon cycle is likewise just a small bit of the huge cycle of carbon driven by photosynthesis and biology. (See Rattan Lal, Sequestration of atmospheric CO$_{2}$ in global carbon pools, \textit{Energy and Environmental Science} 1, 86--100 [2008].)}
+\end{figure}
+
+Without carbon cycling, and the growth of living tissue, there wouldn't be anything to slow down water. Rains would wash soil into the sea.
+
+The hub of the terrestrial carbon cycle, containing more carbon than atmosphere and forests combined, is soil organic matter. Soil organic carbon is a result of ecological processes occurring at or near the soil surface, such as energy flow, mineral cycling, water cycling, and community dynamics. But it also enhances these same processes, absorbing and slowing down water, supporting energy flow, supporting enormous microbial diversity, retaining minerals for plant use, and improving soil quality. Soil organic matter is one form of the surplus thermodynamic work of the biosphere, the excess of photosynthesis over respiration. Fossil fuels are another.
+
+Because soils hold more carbon than the atmosphere and vegetation combined, and can hold it longer, people are increasingly looking to soil carbon as an opportunity to both mitigate and adapt to climate change, along with its twin issue, ecosystem function. Grasslands are not just empty spaces for producing livestock, or flyover land between urban economies. They have a major influence on the composition of the atmosphere, with greater leverage than fossil fuels because they can accumulate carbon, not just release it to the atmosphere.
+
+\section{Let, not make}
+
+\epigraph{We want to \textit{make} animals do things. My whole theory is, I \textit{let} animals do things. Anytime that I need an animal to do something, if I position myself properly, I can let it do it. It's doing what it wants to do, it's doing what I want it to do, so we can both be happy. Anytime that you go to make an animal do something, you create some problems that you don't need.}{Bud Williams}
+
+\noindent The work of the biosphere is accomplished by self-motivated, autonomous organisms: plants, bacteria, animals, humans, and all the rest. The more we can move from \textit{make} to \textit{let}, the better off we'll be, including when we're trying to change people's beliefs or behaviors.
+
+In our attitudes, we are deeply attached to \textit{make}. We're addicted to solving problems, which then multiply. What we need to do is to make our decisions so that these problems fade or disappear.
+
+Some of the most successful and creative farmers and ranchers let their animals, plants, and microbes do the work. They're weaning themselves from \textit{make}, from the addiction to materials handling and more and more technology. They don't spend time and energy making soil bare of life. On these farms and ranches, the biosphere is doing more and more work. There is more photosynthesis going on, for longer seasons, with more diversity, and the release as oxidation is slower.
+
+One of the reasons that our soils have lost so much organic matter (carbon to the atmosphere) is that we have not let them store it or accrue it. The biosphere can turn atmospheric carbon into water-holding, fertility-enhancing soil organic matter, if we let it.
+
+And with monitoring of soil carbon change, we can let the people who know how to let this happen, show us how it is done.
+
+\section{Monitoring: a strategic and creative choice}
+
+\epigraph{There is a fundamental mismatch between the nature of reality in complex systems and our predominant ways of thinking about that reality.}{Peter Senge, \textit{The Fifth Discipline}}
+
+\noindent When we don't have a grasp of the existing situation or of its variability, it's tempting to attribute routine occurrences to special causes. Traffic slowdowns, for example, can happen on an urban freeway for no other cause than natural variations in driving speed and spacing.
+
+Properly designed, repeated observations over time can help distinguish the effects of management from those resulting from weather or just normal background variability. Such observation can enable managers to work with, rather than against, underlying ecosystem processes. Instead of merely responding to short-term events or trends, managers guided by good monitoring can strategically enhance these underlying processes, which can increase economic viability and sustainability as well as leadership in policy and research.
+
+Ecological monitoring has two functions:
+\begin{enumerate}
+\item early warning of opportunities and hazards (navigating toward goal by looking ahead through the windshield)
+
+\item checking to see what happened, and tabulation of results and demonstrated possibilities (rearview mirror)
+\end{enumerate}
+Monitoring is a relatively rare, somewhat hybrid activity that occupies the space between (and is sometimes confused with) two multibillion-dollar giants: prediction, which typically uses computer models to predict future conditions; and research, which typically checks to see what happened after an activity.
+
+Governments, corporations, and the media demand predictions today, much as people demanded astrological forecasts in the Middle Ages. But the best way to predict the future is to create it. Monitoring is a navigational aide for this that also records a track, like a GPS (global positioning systems) receiver.
+
+Of course monitoring must be part of a larger cycle, called plan-monitor-control-replan, or as W. Edwards Deming put it, plan-do-study-act.\endnote{Allan Savory's book \textit{Holistic management: A new framework for decision making} (Island Press, 1998) is the classic text on the holistic management framework, and includes a description of the plan-monitor-control-replan sequence. In his book \textit{The new economics} (MIT Press, 1994), W. Edwards Deming explains the plan-do-study-act cycle that he adopted from Walter Shewhart.} In the latter version, monitoring is the study part of the cycle, connecting do and act. Monitoring adds tremendous value to grazing planning, to testing decisions, to financial planning. (In far too many of our organizations and institutions, the parts of this cycle have been separated into silos, where planning is a different department than doing, and study has little to do with action.)
+
+The heart of monitoring is the attentive study of the here and now. The power and even creativity of this is often underestimated. In 1958 Charles David Keeling \index{Keeling, Charles}went to great lengths to establish an accurate monitoring program for atmospheric carbon dioxide (Fig. 1.2). His core enterprise was not research---he was not attempting to determine the causes of change---nor prediction. Yet his monitoring work, which often struggled for funding against sexier research and prediction and was regarded as routine, resulted in the Keeling curve of jaggedly rising carbon dioxide in the atmosphere, which continues to frame the entire climate issue and influence people's attitudes and beliefs in ways that research, prediction, or argument cannot.
+
+\begin{figure}
+\centering
+\includegraphics[width = 4in]{pics/maunaloa.jpg}
+\caption{The Keeling curve of rising atmospheric carbon dioxide, which is a trace gas in Earth's atmosphere but the predominant one in the atmospheres of Venus and Mars. Wrote Keeling in 1998, ``Environmental time-series programs have no particular priority in the funding world, even if their main value lies in maintaining long-term continuity of measurements.''}
+\end{figure}
+
+
+Monitoring, and letting good things happen, encourages us to be
+\begin{enumerate}
+
+\item observant
+
+\item empathetic, understanding and empathizing not only with mammals or other organisms, but with the biosphere's underlying processes such as water cycling, carbon cycling, and solar energy flow
+
+\item aware of our position or influence relative to the issue or process we are trying to address (don't stand in the way)
+\end{enumerate}
+
+Soil carbon, which can be measured accurately, is one way to monitor the \textbf{work of the biosphere} on land, on which our climate, water cycling, and welfare depend. By monitoring this biosphere function locally, we can show what the possibilities are in our back yards, towns, farms, ranches, and open spaces.
+
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth]{pics/greenonionNocaption.pdf}
+\caption{On which level do we typically focus our efforts? If we want to transform the situation, where is the center of gravity? Where can self-reinforcing or positive feedback create fundamental shifts?}
+\end{figure}
+
+
+\chapter{Photosynthesis}
+
+\chapter{Water}
+
+
+\chapter{Production}
+
+
+
+
+\chapter{Soil carbon change}
+
+\epigraph{If they can get you asking the wrong questions, they don't have to worry about the answers.}{Thomas Pynchon, \textit{Gravity's Rainbow}}
+
+\noindent Like the atmosphere or the oceans, soil is a complex three-dimensional layer whose composition results in good part from the metabolisms and choices of the biosphere's self-motivated, autonomous organisms, along with physical influences such as the parent material, climate and weathering, and water.
+
+But soil is not as well mixed as are the atmosphere or oceans. It is a product of history, much of it local, on the scale of millimeters as well as miles. Variability is everywhere.
+
+\section{Purpose, result, and uncertainty}
+
+There is no right or wrong way to measure soil carbon. \textbf{What} you measure, along with \textbf{how} you measure it, depends on your purpose---\textbf{why} you are doing it, and what you are going to do as a result. The questions you are trying to answer will depend on the purpose. So do the likely sources of uncertainty or risk.\label{purpose}
+
+Some people may have mixed or multiple purposes, or may be measuring soil carbon change for other reasons than what are listed here. Here are four of the most common results from (or purposes for) measuring soil carbon change.
+
+\textbf{1. Do nothing.} Some people measure soil carbon just for curiosity, or research for its own sake, and don't make any changes as a result.
+
+\textbf{2. Sell something} such as carbon ``offsets'' or ecosystem services. Common questions include: How many tons of carbon or carbon dioxide per hectare per year? How certain can we be of the estimate? How permanent is the sequestration?
+
+Sampling error and biased or non-random selection of sampling sites can be sources of uncertainty. Statistics based on frequency probabilities may be your main tool for gauging or quantifying such uncertainty, and for designing a sampling scheme that meets the need for statistical credibility. The statistics chapter may be helpful.
+
+However, there are other sources of uncertainty in selling carbon credits or ecosystem services, such as whether these markets exist or will exist, whether you are eligible to participate, present and future prices, overhead or transaction costs, and other verification requirements such as adhering to certain land management practices, or to certain standards of documentation. Compared to these additional sources of uncertainty or risk, statistical uncertainty over tonnage of carbon sequestered may turn out to be minor.
+
+\textbf{3. Test agricultural or land management practices,} and use the results to set policies or incentives for best management practices. Which are the best management practices for sequestering carbon, and how much carbon do they sequester? What will effective incentives consist of, and how can can they be created?
+
+With this purpose, statistical uncertainty over tonnage, to which experimental design and randomized sampling contribute, can be significant.
+
+There is also uncertainty around whether the practices you are experimenting with can be accurately defined. The term \textit{grazing}, for example, can describe a huge range of activities with many variables, each with high variability. Are we talking about insects, rodents, single-stomached mammals, ruminants, or some combination? Time and timing? One or one million pounds of grazing animals to the acre? Animal behavior and dietary selection vary greatly. The full range of possibilities or variables isn't listed anywhere. Things change. Future possibilities may differ from past experience. Some farming practices may be easier to describe, but when you are defining or prescribing practices, large difficulties of interpretation remain.
+
+The definition issue increases the uncertainty about the causes of change in soil carbon. Is it variation due to normal fluctuations in microbial activity, weather, or combinations of these, or some unknown causes, or is it caused by the management practices under investigation?
+
+When ``best management practices'' are chosen or defined, you forgo adaptation to changing conditions and situations. If the practices work for a while, and then quit working, or simply don't work in some areas or conditions, incentive programs may be slow to change.
+
+In designing incentives, uncertainty about the behaviors and beliefs of land managers looms large. Cost, technology, and the broad spectrum of cultural and cognitive biases are not always predictable. How well the chosen best management practices perform in other areas or regions, or how they are implemented with varying degrees of skill, insight, or commitment---the uncertainty here can be huge.
+
+Many of these uncertainties arise from the attempt to define or prescribe best management practices for others, which characterizes a great deal of agricultural research. When measurement of soil carbon change is used as feedback to management, or monitoring, as in the following strategy, many of these uncertainties can be managed.
+
+\textbf{4. Test specific, local management,} and use the results to learn and innovate toward a desired future, both locally and globally. How might our management of this land create the future that we want? What other considerations apply?
+
+As with previous strategies, statistical uncertainty will play a part, as will experimental design, location of plots, and the choice of boundaries on the vertical or horizontal strata in your sampling design.
+
+In analyzing soil carbon change, separating normal from special causes of variation can be difficult, and statistical analysis is only partly helpful.
+
+Major sources of uncertainty include your beliefs about what's possible, how good your decision making is in relation to the desired future you want to create, your ability to test decisions well, your observational skills, and your willingness to question or test your beliefs.
+
+However, someone who is monitoring his or her own management has a tremendous advantage over the researcher looking for best management practices. This is the opportunity to \textbf{take responsibility} for creating the results, for creating a desired future, along with the responsibility for his or her own beliefs, commitment, and skills. The manager can commit to flexible management, to adapting and innovating based on observations and what monitoring indicates, including early warning signs of shift in the way biosphere processes are operating.
+
+\begin{center}
+\S
+\end{center}
+
+\noindent In the results or purposes enumerated above, there is a progression from the enumerative (counting tons of carbon) to the predictive (best management practices and their yield of soil carbon) to the creative (testing and innovating in a specific situation).\endnote{Deming made an important distinction between enumerative and analytic studies (Chapter 7 in \textit{Some Theory of Sampling} from 1950). An example of an enumerative study is the U.S. Census, to determine representation in the House of Representatives. Another is sampling a shipload of iron ore to estimate a likely price, and the risks of paying too much or selling for too little. An analytic study, on the other hand, aims at identifying and influencing the causes of change, such as identifying practices or management for enhancing soil carbon. Deming wrote, ``Techniques and methods of inference that are applicable to enumerative studies lead to faulty design and faulty inference for analytic problems'' (``On probability as a basis for action,'' from 1975). \textit{The New Economics} (1993) also treats the subject briefly on page 100.} Moving from enumerative to predictive to creative means accepting more and more responsibility, which also gives you increasing opportunities to manage and reduce uncertainty and risk.
+
+Though measurement of soil carbon has so far been treated mostly as a technical or statistical problem, the main sources of uncertainty in achieving common purposes and objectives are human and social---such as people's beliefs about what is possible or not possible. Grasping the soil carbon opportunity is a people issue, not just a technical one.
+
+\section{Change}
+
+\epigraph{Any practice that improves soil structure is building soil carbon.}{Christine Jones}
+
+\noindent Enormous efforts have been devoted to mapping and classifying soils as if they are unlikely to change very much on a human time scale. \textit{It takes a thousand years to form an inch of soil} has been repeated so often that it is regarded as true by many. Charles Kellogg, who in the 1930s was soil survey chief for the U.S. Bureau of Chemistry and Soils, wrote:
+
+\begin{quotation}\noindent Some people speculate about how much time is required ``to build an inch of soil material.'' The answer could well be, ``somewhere between 10 minutes and 10 million years.''\end{quotation}
+
+Today, many people are becoming more concerned with the possibilities for \textbf{change}: preventing loss of soil organic matter, and creating positive changes through management. Most research, however, has leaned toward comparing two areas with different management histories, rather than monitoring one place over time.
+
+This guide is directed at monitoring. It shows how to set one or more benchmarks or fixed plots from which a time series of multiple samples can be taken and analyzed, in order to detect and measure change. In effect, a compact 4 $\times$ 4-meter plot serves as its own ``control'' in an experiment carried out by biosphere processes, human management decisions, and weather over time.
+
+This is easier than mapping soil carbon over a field or land parcel, but it takes patience. Results are not instant. The longer you wait between samplings, the greater your chance of detecting and measuring change, and distinguishing the effects of management from those of year-to-year weather variability.
+
+\begin{figure}
+\centering
+\includegraphics[width=3in]{pics/simplecarbonchange.pdf}
+\caption{Measuring soil carbon change is \textbf{simple.} It requires 1) two samplings or measurements of the same soil area, at different times; 2) accurate sampling and laboratory analysis; and 3) more than just one or two samples; 4) commitment and patience, as the \textit{then} must be established well before the \textit{now.}}
+\end{figure}
+
+Soil carbon can be divided into various categories, and there are two commonly measured attributes:
+\begin{enumerate}
+
+\item \textbf{Trend}, or percentage change in soil carbon, to a given depth. Sample declaration: in three years soil carbon percentage in the top 30 cm has changed from 1.9\% to 2.7\%, a relative gain of 42\%, or 12.4\% per year on average, compounded for three years. Conclusions about trend in soil carbon require measurement of only one parameter: carbon percentage in soil.
+
+\item \textbf{Mass}, quantity, or tonnage of soil carbon, per hectare or per acre, to a given depth. Sample declaration: in three years this area, plot, or field has added 4.2 tons C (equivalent to 15.4 tons CO$_{2}$) per hectare to a depth of 30 cm, or 1.4 tons C per hectare per year. Conclusions about mass or quantity of soil carbon require measurement of two parameters: 1) carbon percentage of soil, multiplied by 2) bulk density of soil (dry mass per unit volume). This multiplication converts percentage carbon to mass.
+\end{enumerate}
+
+Because of variability combined with relatively small sample sizes, both types of measurements result in statistical estimates, qualified by standard error ($\pm$ error) and probability or confidence (for example, p $\le$ .05 or 95\% confidence).
+
+For purposes of feedback to management, or establishing that management is storing more soil carbon, or for progress in soil quality, trend may be all you need. See \texttt{soilcarboncoalition.org/changemap.htm} for some examples.
+
+The policy and ``offset'' market discussions have focused on mass, quantity, or tonnage of carbon or carbon dioxide. Detecting change in soil carbon mass, since it requires measurement of three parameters (carbon percentage, volume sampled, and bulk density) is more complicated.
+
+Voluntary or local carbon market transactions or incentives may be more likely if you measure mass. Should regulated markets emerge, there is no guarantee that the methods outlined here would be accepted as verification.
+
+\section{Organic and inorganic soil carbon}
+
+The element carbon exists in the soil in many forms, but for the purposes of measurement and analysis there are three main forms.
+
+\textbf{Organic soil carbon} is derived from living tissue: plant leaves and roots, sap and exudates, microbes, fungi, and animals. It takes a bewildering variety of complex chemical forms, many of which remain unclassified. Much of it is a result of decay processes and microbial metabolisms. Soil organic matter\index{organic matter} is a generic common name. It contains 50--58 percent carbon by dry weight.
+
+Soil organic matter provides critical structure and condition for soil to accept and hold water. Its sticky components (such as glomalin) play a critical role in the formation of soil aggregates which give soil its stability against weathering and erosion, and its ability to hold water and air for plants and microbes.
+
+In the 1930s, soil scientist William Albrecht recommended conserving and maintaining soil organic matter as a national priority. After several generations in which USDA policies and programs largely ignored soil organic matter, the number one recommendation of the USDA-NRCS Soil Quality Team is now to enhance soil organic matter (\texttt{http://soils.usda.gov/sqi/}).
+
+Soil organic matter may be the most valuable form of soil carbon, but is generally the least stable, though some forms may persist for a thousand years or so. Many forms can be readily oxidized (turned into carbon dioxide) by common bacteria in the presence of oxygen. But it is also the form of soil carbon that can readily increase as a result of plant growth, the root shedding of perennial grasses, the incorporation of manure or compost, the liquid, carbon-rich exudates of plant roots, all processed by microbial metabolisms. Soil organic matter is the most abundant form of soil carbon.
+
+\textbf{Charcoal} also derives from living tissue, so it is considered organic. It is often called biochar\index{biochar}\index{charcoal}. It can range from 50 to 95 percent carbon by weight. It is more stable and more resistant to bacterial oxidation than most other forms of organic carbon, which is one reason why there is considerable interest in incorporating biochar into soil as a carbon ``sequestration'' strategy.
+
+\textbf{Inorganic soil carbon}\index{inorganic carbon} is mineralized forms of carbon, such as calcium carbonate (CaCO$_{3}$) or caliche. \index{carbonates}It is more stable than most organic carbon because it is not food or fuel for microorganisms. Because acid dissolves calcium carbonate, it is not usually abundant in soils of pH 7 or lower, or in humid regions where higher rainfall leaches it downward in the soil profile. Carbonates are common in more arid regions and alkali soils, and are a significant soil carbon pool worldwide, derived mostly from organic carbon fixed by photosynthesis.
+
+Inorganic carbon, while it does not possess the water-holding and soil-enhancing properties of organic carbon, is nevertheless a significant sink for atmospheric carbon, though it typically changes at a slower rate.
+
+\section{Laboratory tests}
+
+Soil carbon cannot be measured directly. However, some methods are far more direct than others, and involve fewer assumptions and sources of error. Though there has been considerable buzz about the possibilities of remote sensing or high-tech field methods of assessing soil carbon, and some of these show promise, the gold standard remains careful, repeated field sampling followed by laboratory analysis by the dry combustion\index{dry combustion} method, often called elemental analysis.
+
+The dry combustion or elemental analysis procedure is the most accurate common test for soil carbon, and is often cheaper than other tests. Most research indicates that change in soil carbon occurs most readily in the soil organic matter fraction, so that if you detect change, it is likely to be in the organic carbon.
+
+However, if carbonates are a significant percentage, your ability to detect change can improve if you have at least some idea of how much soil carbon is organic and how much is inorganic.
+
+\textbf{Dry combustion or elemental analysis.} The most accurate standard laboratory test for soil carbon is dry combustion\index{dry combustion} using an elemental analyzer such as those made by Leco, Perkins-Elmer, Elementar, or Carlo Erba. These instruments heat a small sample (usually a fraction of a gram) of dry pulverized soil to around 900$^{\circ}$ C and measure the CO$_{2}$ gas that is a combustion product. (They usually measure nitrogen as well.) The results are expressed as the percentage of carbon in the sample. The dry combustion test oxidizes and measures total soil carbon: organic matter, charcoal, and carbonates. (There is a short listing of U.S. soil labs on page \pageref{soil labs}.)
+
+\textbf{Acid treatments.} If the soils you are testing contain carbonates or inorganic carbon, and you wish to distinguish organic and inorganic carbon, many labs have an acidification option, in which a sample or subsample is treated with hydrochloric acid to remove carbonates\index{carbonates}, and then subjected to dry combustion to measure remaining organic carbon. Measuring organic and inorganic carbon separately thus requires acidification plus two dry combustion tests.
+
+\textbf{Loss on ignition and Walkley-Black.} Less accurate are the more traditional loss on ignition\index{loss on ignition} (LOI) and Walkley-Black\index{Walkley-Black} tests. Loss on ignition measures the weight loss of a dry soil sample after it is heated in an oven or muffle furnace to 360--450$^{\circ}$ C for a couple of hours. Walkley-Black is a wet chemistry method using potassium dichromate.
+
+Neither of these tests measure total carbon. The Walkley-Black test does not usually give a full accounting of charcoal, and may miss some types of organic matter. Neither measures inorganic carbon.
+
+The interest in soil carbon from the perspective of biosphere function or climate change is relatively recent. Many labs are accustomed to testing for soil organic matter for the purposes of calculating effective rates of herbicide application. For this purpose, soil organic matter is a liability because it lessens the effectiveness of herbicides on living vegetation, and loss on ignition or Walkley-Black tests are typically used.
+
+\textbf{Carbon fractions.} Recently there has been increasing interest in classifying various types or fractions of soil organic carbon such as active, labile, particulate, occluded, light, or heavy, with various residence or turnover times ascribed to the various fractions. Ray Weil and others have recently promoted the use of potassium permanganate wet chemistry to measure active carbon in soil, which may give an earlier indication of soil carbon change.
+
+\textbf{Soil respiration.} Soil respiration, the emission of carbon dioxide by microbial respiration, is a good indicator of microbial biomass, but may not correlate well with soil organic matter or total carbon. \texttt{solvita.com/soil} sells a few types.
+
+\textbf{Bulk density.} The density of soils can vary over a wide range. Water has a density\index{density} of 1 gram per cubic centimeter. Soils can have densities ranging from .1 for light peats to 1.8 for very dense, compacted mineral soils, often with little pore space for water and air. Organic matter is lighter than most mineral matter, so if organic matter increases in a soil, the density will likely decrease.
+
+The test for bulk density\index{bulk density}\index{density} is simple: oven-dry a sample of known volume to remove all moisture, and weigh it. The bulk density is the dry weight in grams divided by the volume in cubic centimeters.
+
+\vspace{2em}
+\footnotesize
+\begin{center}
+\begin{tabular}{|p{1.8in}|p{1.8in}|p{1.8in}|}\hline
+\textbf{form or aspect of soil C}&\textbf{tests}&\textbf{comment}\\\hline
+organic C&dry combustion (prior acidification of sample will remove inorganic carbon), loss on ignition, Walkley-Black, soil respiration, active carbon tests&the largest and most important soil carbon pool\\\hline
+inorganic C (carbonates)&dry combustion (with organic carbon subtracted)&an important soil carbon pool, but slower to change\\\hline
+charcoal&dry combustion, Walkley-Black (partial)&recalcitrant form of organic matter\\ \hline
+total carbon&dry combustion&for most purposes, dry combustion is the best and most accurate test\\ \hline
+bulk density&oven-drying and then weighing a sample of known volume&essential to be able to quantify mass or tonnage of carbon in soil\\ \hline
+\end{tabular}
+
+\end{center}
+\normalsize
+
+
+
+\section{Getting started}
+
+\noindent The forms of carbon you choose to measure \textbf{depend on your purpose.} The carbon cycle involves all forms, some slower, some faster. Measurements of net gain or loss of total carbon in soil can show the overall picture, but will not distinguish the forms and pathways.
+
+Depending on purpose, some of the material in this guide may not apply. The main difficulty with any monitoring program is getting started. The best time to start monitoring is typically 10 or 20 years ago. The second best time is now.
+
+\begin{enumerate}
+\item Set up and sample one or more fixed plots or benchmarks now (see chapters 3 and 4). You can add more later.
+
+\item Use the dry combustion test (CN analyzer) for analysis of total soil carbon.
+
+\item Use the metric system as much as possible. It's easier to compare your figures to those of others, and some calculations are much easier.
+\end{enumerate}
+
+
+\chapter{Site selection and sampling design}
+
+\epigraph{The most meaningful indicator for the health of the land is whether soil is being formed or lost. If soil is being lost, so too is the economic and ecological foundation on which production and conservation are based.}{Christine Jones}
+
+\noindent Because this guide focuses on measuring \textbf{change} in soil carbon, it recommends a system of fixed plot locations, in which multiple samples are taken. The idea is not to map soil carbon, but to establish benchmarks, indicator plots, or experiments by which change over time can be detected.
+
+\section{Mapping your site}
+
+There are many advantages to online \index{mapping}mapping. Google Earth\index{Google Earth} is a free program that allows you to draw lines, polygons, and points, see topography, and save and share your maps with others. For the U.S., range, township, and section boundaries and USGS topographical maps can be added as overlays. You can also map points and tracks that are recorded by a GPS receiver. There are free utilities that can calculate the area of polygons or boundaries from the .kml (keyhole markup language) files that Google Earth uses.
+
+Geographical information system software (GIS) can also be used, but sharing is more limited.
+
+Paper maps are durable and versatile. A map is not the territory, but a map, even a hand-drawn one, is better than no map for marking land divisions and plot locations.
+
+\section{Stratification}
+
+The purpose of sampling is typically to get useful data, with the appropriate resolution and confidence, while holding down costs. Stratification, \index{stratified sampling}the division of the soil to be sampled into layers or horizontal zones likely to have similar degrees of change, may give better resolution and confidence without increasing the number of plots, and thus costs. For an example of how to process data from horizontal strata, see page \pageref{strat}.
+
+A stratified sampling approach is most effective when three conditions are met:
+\begin{enumerate}
+\item variability within strata is minimized
+\item variability between strata is maximized
+\item the variables upon which the parcel is stratified (such as slope, vegetation cover, or management) are strongly correlated with soil carbon change
+\end{enumerate}
+
+\subsection{Vertical strata}
+
+Soil carbon is likely to vary with depth. Most soil carbon sampling thus defines one or more layers of soil, usually by the distance in centimeters from the soil surface.
+
+For example, in a grassland where the average depth of dense roots is 30 cm, it may make sense to define the top layer as 0--30 cm, or further subdivide it into 0--10 and 10--30 cm layers. Separation into layers will affect your ability to detect change. The thinner the layer, the better the resolution---the ability to detect smaller changes. But thinner layers mean more complicated sampling, and higher laboratory costs.
+
+Deeper layers may have less variation, but the tonnage of soil carbon can be significant below the surface layers. The liquid carbon pathway, by which plants exude photosynthetic compounds which are taken by mycorrhizae and then turned into humus by a variety of other microorganisms, may be pronounced in permanent grasslands. In sampling pastures at 0--10 cm, 10--25 cm, and 25--40 cm, I've often found carbon content higher in the 25--40 cm layer than in the 10--25 cm layer.
+
+\subsection{Horizontal strata}
+
+A peat bog is likely to have much higher carbon content than an arid upland soil. If it has been drained or partially drained, it may be losing carbon through oxidation, whereas the upland soil may be gaining carbon. Sampling these areas separately, as different strata, can significantly reduce the variability you encounter, thus boosting confidence and increasing resolution while not increasing the number of samples needed.
+
+Differences in soil types, slope and aspect, vegetation cover, or management whether past or present may be good criteria for separating land into different strata. Mapping software, such as Google Earth, can help with this.
+
+For the U.S., soil maps\index{soil maps} and reports for areas of 10,000 acres and under can be defined and then downloaded from the NRCS website:
+
+\texttt{websoilsurvey.nrcs.usda.gov/app/HomePage.htm}
+
+\noindent There are also soil survey layers for Google Earth, for example,
+
+\texttt{casoilresource.lawr.ucdavis.edu/drupal/node/538}
+
+\section{Locating plots}
+
+The ideal in statistics is for sampling locations to be chosen at random, where each potential core sample location has an equal chance of being chosen. With small sample sizes, this is often not practical. Plots should be located in areas that are typical or representative of the stratum, or of the majority of the area you are dealing with. If you come to feel that one or more plots are badly located, you can establish others.
+
+Plots should be representative of slope and aspect, and in hilly ground could include ridgetop, midslope, and bottom positions. Locating plots according to soil type can often work well for this.
+
+Plots can also represent different management. For example, it may be instructive to locate a plot inside a grazing exclosure, so as to be able to compare the rate of soil carbon change under grazing management with that under rest from grazing.
+
+It helps to think of plot selection as experimental design. How can you test your beliefs or hypotheses? It may even be possible to locate plots, or design an experiment, that tests beliefs that you don't even know you have.
+
+It is a great advantage to combine soil sampling for carbon change with soil surface monitoring of biosphere function such as Land EKG or Bullseye. This will help you standardize plot locations as well as give you more results for your field time.
+
+\section{Sampling tools}
+
+Soil carbon can be most accurately measured by means of undisturbed samples, in other words intact cores that can be segmented by depth. Soil probes that cut a core are best for this. For rangeland and pastures, hand or hammer probes that have an open slot on one side tend to be easier to work with than probes that collect the sample within a plastic tube, because it is easier and quicker to detect gaps and clogs with a slotted sampler. The height of the slot limits the depth of your sampling. The rest of this guide assumes that you are using a soil probe that cuts intact cores.
+
+Hand probes come in a variety of sizes and configurations. Some have a T-handle for pushing into the soil and others have various hammer attachments, such as a slide hammer, for harder soils. Some have replaceable tips, which are advisable with a hammer probe because you will hit rocks.
+
+\section{Sampling intensity within the plot}
+
+On unplowed grasslands, where variability tends to be high over short distances, 8 samples per plot are advisable in the surface layer. On regularly tilled ground, 4 samples per plot in the surface layer may be sufficient for most purposes. In forests, soil carbon variability can be very high because of buried rotting wood, and more samples should be considered.
+
+Once you have decided on a sampling intensity for your plots, match your locations to the grid layout for consistency. For example, if you are taking 6 surface samples, 2 deeper samples, and 2 bulk density tests, you may choose to use grid locations 1, 4, 10, 19, 22, 25 for your surface samples, 10 and 19 for your deeper samples, and 4 and 22 for your bulk density samples.
+
+The grid plot layout enables us to take multiple samples in a compact area, over multiple samplings, without resampling a previously disturbed hole. The mean or average carbon content of the plot provides a kind of benchmark for the plot area. We cannot in fairness resample the same soil on subsequent samplings, because of the potential effect of the disturbance on soil carbon content, but we can again take multiple samples from the same compact area, and thus estimate change over time for the plot.
+
+If economics permits, you may wish to analyze core samples separately, for at least one of your plots in each stratum, during the baseline or initial sampling. The resulting data can indicate the variability among samples in a plot, and be used to gauge the sufficiency of your sampling design. During resampling, take multiple samples as before, but they can be bulked or composited by layer, thus saving lab costs.
+
+\begin{center}
+\begin{tabular}{|l|r|l|}
+\multicolumn{3}{c}{\textbf{Common conversions}}\\ \hline
+starting with&multiply by&to get\\ \hline
+acres&.405&hectares\\ \hline
+hectares&2.47&acres\\ \hline
+acres&4,047&square meters\\ \hline
+hectares&10,000&square meters\\ \hline
+tons of carbon&3.67&tons of carbon dioxide\\ \hline
+tons of carbon dioxide&.273&tons of carbon\\ \hline
+tons of carbon dioxide per acre&.11&tons of carbon per hectare\\ \hline
+centimeters&.394&inches\\ \hline
+inches&2.54&centimeters\\ \hline
+\end{tabular}
+\end{center}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=3.5in]{pics/rhizosphere.jpg}
+\caption{Strong, sticky aggregation around perennial grass roots, caused most likely by abundant glomalin-forming mycorrhizae. USDA photo.}
+\end{figure}
+
+
+\chapter{Sampling and field procedures}
+
+Once you have a basic design, assemble equipment and supplies, fill out the monitoring plan (page \pageref{monitoringplan}) and go take the samples. Sampling very dry soils or frozen soils is often difficult, and some soil moisture will make hand sampling easier. For consistency, it is a good idea to remonitor and resample at the same general time of year as the initial baseline.
+
+\section{Lay out a transect \index{transect}and mark the plot center}
+
+One of the best ways to locate a permanent plot or microsite is by means of a \textbf{tape transect.} If possible, align the transect with permanent or long-lasting landmarks, and take a compass sighting as well as photographs and auxiliary measurements. During monitoring and sampling, the 200-foot or 50-meter tape will serve as a reference for all locations and sampling points.
+
+The plot center should be at a certain point on the tape. Choose a plot center for a 4 $\times$ 4-meter plot where the plot area is relatively even and representative of a larger area. Pits, humps, or extensive rodent diggings at grid point 1 where you might take bulk density samples should be avoided.
+
+At each end of the tape, permanent markers such as steel rebar stakes, bent in an upside-down J shape so as not to pose a hazard, can be set flush to the ground, perhaps with a 2-foot section of aluminum wire for additional visibility. A white plastic bucket lid, though it may not last more than a few years in full sun, is also a visible marker and handy to stand on for consistent photos. Disc blades make excellent markers for the ends of transects. Carefully record all locations, and take photos up and down the transect, using a small whiteboard or chalkboard as a label with date and project information.
+
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth]{pics/EZgrid.pdf}
+\caption{\textbf{A grid plot layout} provides 24 sampling locations, a meter apart, in a 4 $\times$ 4 meter square around the center point. \label{EZgrid}At each sampling, up to 8 cores can be taken in previously unsampled points. Each core sample should be identified by its plot identifier as well as its numerical position on this grid, for example MF4-A21 indicating Muggy Farm, plot 4, position 21, layer A. For bulk density samples, use MF4-A21BD. If soil pits are needed, choose one of the outside locations. Use grid locations for bulk density sampling as well. After three samplings, the grid spacing can be expanded from 1 to 1.5 m to provide additional, previously unsampled points.}
+\end{figure}
+
+I recommend marking the end points of the transect, rather than the plot center, which can be located by restretching the tape once the endpoints are located. The end points should be marked with something that will not interfere or pose a hazard to livestock, vehicles, agricultural equipment, etc. In pastures, an 18-inch section of $\frac{3}{8}$-inch rebar can be bent in a J or eye, perhaps with a couple of feet of aluminum wire affixed at one end for easier relocation, and driven flush. In cultivated fields a piece of steel such as rebar can be driven into the soil below the tillage layer, and subsequently located using a metal detector. In pasture lands, a plastic bucket lid fastened to the ground with pole barn nails may be a good marker, but not where wild pigs are common. I prefer three permanent markers.
+
+A GPS receiver is a great idea in recording the photo point or ends of a transect, for general navigation and mapping, but don't rely on consumer-grade receivers to relocate your markers. Lines of sight and permanent markers, plus tape and compass, are superior. Measured distances and compass bearings from fixed posts or landmarks can give additional means of relocating the plot. Plot locations can also be combined with soil surface monitoring locations.
+
+A common reason for the failure to measure change over time is the \textbf{failure to accurately relocate transects and sampling points.} Remember, if you can't find your transect or relocate it accurately, your work is wasted!
+
+
+\begin{figure}
+\centering
+\includegraphics[width = 4in]{pics/plotmapsample.jpg}
+\caption{One of the best ways to locate a plot or microsite permanently is by means of a \textbf{transect}. \index{transect} If one or even two of your markers disappear, you can still relocate it. Draw a sketch map of each transect and plot as a guide for those who might remonitor the site. This will help you too. Note that this sketch map includes the 4 $\times$ 4-meter grid layout with the baseline sampling points indicated.}
+\end{figure}
+
+
+Do not mark plot centers with steel fence posts, as livestock or game may use the post as a rub, and potentially influence soil carbon change in the plot through their localized behavior and effects on the soil surface.
+
+
+\section{Soil surface observations}
+
+If your purpose with soil carbon measurement includes guiding management, this guide strongly recommends that you combine sampling for soil carbon with systematic monitoring of above-ground conditions. Land EKG \index{Land EKG} is a good practical method for qualitatively and quantitatively assessing biosphere function in grasslands. Bullseye! monitoring is another. Either the Land EKG hoop or the Bullseye quadrat, plus related observations, should accompany soil carbon plots on rangeland.\endnote{For Land EKG, see \texttt{landekg.com}. For Bullseye, published by the Quivira Coalition, see \texttt{http://quiviracoalition.org}}
+
+The 30-inch-diameter Land EKG hoop or should have its edge at the plot center (south edge in the southern hemisphere). A Bullseye quadrat can be located similarly. At the very least, take a photograph\index{photograph} straight down onto the hoop or quadrat from approximately chest height while standing on the plot center. Include in the photograph the data sheet in this guide with the plot identifier, latitude and longitude, and date written large and clear.
+
+As you observe changes in the conditions at the soil surface, for example better plant production and soil cover, so too you may observe an increase in soil carbon.
+
+Look closely for signs of soil movement, erosion, or deposition.\index{erosion}\index{deposition}\index{soil movement} Wind or water moving soil across the landscape can be a significant cause of change in the amount of carbon measured over time. Plant pedestaling, litter dams, rills, or signs of sheet erosion all indicate soil loss. Tillage tends to erase signs of soil movement. Where soil is moving horizontally across landscapes, there is much less certainty about the causative processes of soil carbon change.
+
+\section{Lay out the plot}
+
+\textbf{Stretch the tape.} It is best to align the tape with landmarks if possible, for easier relocation. The very best is to align something near (say a church steeple or permanent power pole) with something far (such as the peak of a mountain).
+
+\textbf{With a sighting compass} make sure cell phones or other magnetic influences are not nearby. Take a compass bearing along the tape. Choose a photo point (not necessarily the plot center) and take photos up and down the tape, making sure the tape bisects the photo, and include the foreground.
+
+\textbf{With a GPS receiver,} get the coordinates of the photo point, preferably decimal degrees to five places. Write it down.
+
+Use a meter stick to find grid locations relative to the plot center. Right angles can be trued by sight or by measuring 1.41 meters diagonally. For example, if your plot center is at 88 feet, set two meter sticks end-to-end at right angles from the 81.5-foot mark to locate one corner. Lay your meter sticks along the ground.
+
+\section{Use probe to take samples}
+
+After you have made soil surface observations, go after the core samples, trying to minimize disturbance of the soil surface while you do this.
+
+The main thing to achieve here is taking a core sample that is representative of the layer you are sampling. If for example you are sampling to 40 cm, push your probe a bit more than 40 cm into the ground. Use a meter stick, or half a meter stick, to section your sample according to the layers you are sampling.
+
+If there is crop residue, thatch, or partly decomposed litter, it is best to remove these gently from the soil surface with your fingers or a tool \textbf{before taking a probe sample.} Standard practice in soil carbon work is not to include the litter layer in soil carbon, but to begin sampling at the upper surface of mineral soil. Where sod is present, or litter is partially decomposed, this can be a difficult boundary to identify and create. Most laboratories will run samples through a 2-mm sieve, so pieces of litter in the sample can be ignored.
+
+If your sampling location coincides with a woody plant of any size, do the best you can to get a soil sample at that location while minimizing damage to the plant, remembering that root fragments are generally sieved out during sample preparation, and can be discarded from the sample once they are clean of soil.
+
+When taking samples below the surface, be sure that your core is uncontaminated by litter or by soil from other layers. Pile soil from digging or auger work onto a plastic or canvas sheet, and replace the soil when you are done.
+
+Hand and foot operated probes work well in many situations. For loose and moist soil, thin-walled probes work best because they compact the least, and are least likely to clog and continue to penetrate, thus not taking a full core. In some clayey soils, a little water may help (but be sure the water does not contain significant amounts of dissolved solids such as calcium carbonate). Firmer soils will favor sturdier and thicker-walled probes, with slide hammer attachments often handy. Hydraulic probes are excellent for taking samples in hard dry ground, and for taking deeper samples. A probe with a diameter of an inch or somewhat less will give you a sample of adequate volume. Larger-diameter probes will retrieve larger samples, which you may want to divide lengthwise so as not to send pounds and pounds of soil to the lab for each sample.
+
+\section{Soils with abundant rocks, gravel, or coarse fragments}
+
+Small hand probes aren't effective in soils with lots of rocks or gravel. If it proves impossible to sample one or more layers fully because of rocks or gravel, you may choose to sample as best you can, note the depths of your samples, and move on. You may wish to add an extra plot or two if this occurs.
+
+Rocks and coarse fragments may contain a significant portion of organic carbon in fissures and weathered pockets, and so pose an issue for measurement as well. As grinding the rocks into powder for analysis is often impractical, the soil fraction consisting of particles larger than 2 mm is usually ignored.
+
+In rocky or gravelly soils, it may be most practical to gather two samples each from four small soil pits, taking care to note the size and location of the pits relative to the plot center, so that future sampling can use different locations, and to restore the pits upon completion as fully and carefully as possible. To sample from a shovel pit, you should sample from the sides so that you know where the soil is from. For example, to sample 3 layers in a 40 cm pit, insert markers into the sides of the pit at the division points (e.g. 10 cm, 25 cm) and take samples from the side of the pit using a spoon or ice cream scoop.
+
+\section{Characterize the soil}
+
+For the plot, you may choose to describe all, some, or none of the following. These descriptions can give valuable context to your observations, but they may or may not be relevant to your purpose in monitoring soil carbon or biosphere function. These descriptions are all variable and subject to interpretation. Soil carbon is perhaps the best soil health and condition indicator, and it can be measured accurately via dry combustion/elemental analysis.
+
+\begin{enumerate}
+
+\item \textbf{Location notes.} Describe the location, and any correlations with soil surface monitoring transects or sites.
+
+\item \textbf{Slope, aspect, and vegetation.} Approximate slope, and direction it is facing. If your sighting compass doubles as an inclinometer this is easy. Characterize the vegetation to the best of your ability.
+
+\item \textbf{Moisture status.} Wet, dry, or moist. Use a moisture tester if you wish.
+
+\item \textbf{Structure.} Is the soil granular, like sand, blocky, platy, prismatic, columnar, single grained, or massive?
+
+\item \textbf{Consistency.} Is the soil loose, friable, firm, or extremely firm?
+
+\item \textbf{Texture.} Approximate proportions of sand, silt, and clay.
+
+\item \textbf{Rocks and roots.} None, few, many.
+
+\item \textbf{Carbonates.} Carbonates\index{carbonates}\index{inorganic carbon} such as calcium carbonate, CaCO$_3$ are inorganic. A few drops of distilled vinegar applied to soil (hydrochloric acid or HCl is the more serious approach) will effervesce if carbonates are present. Your ear rather than your eye may be a more sensitive detector of effervescence: put some soil in your palm (or in a ceramic dish if using hydrochloric acid), add a few drops to the soil, bring to your ear and listen closely.
+
+\item \textbf{Aggregate stability} using the sieve test described in \textit{Indicators of Rangeland Health}, Appendix 7, or\\ \texttt{wiki.landscapetoolbox.org/doku.php/field\_methods:soil\_stability}
+
+\item \textbf{Infiltration} such as a timed test using a tension infiltrometer.
+
+\end{enumerate}
+
+For each core sample, \textbf{note the top and bottom depth in centimeters.} This is essential data. Characterize the litter-soil boundary, and note any differences from other samples in the plot.
+
+\section{Bag the sample}
+
+For samples to be analyzed singly, take the core from the top to bottom depth and place it in your sample bag.
+
+Label each sample bag with a clear and unambiguous identifier with a permanent marker. The sample identifier should make reference to the land parcel, the plot, and the position of the sample with respect to the EZ-grid plot layout (page \pageref{EZgrid}). For example, B6N3-A4 could refer to the Bar 6 Ranch, plot 3, soil layer A, grid position 4.
+
+If you are combining several samples for analysis, a bucket or plastic container is handy for mixing or combining samples. Each sample or core should be evenly representative of the entire layer sampled, as soil carbon often decreases with depth.
+
+\textbf{Be sure to air-dry your samples as soon as possible after sampling} to minimize oxidation of soil carbon.
+
+
+\section{Going deeper}
+
+It can often be difficult to push hand probes deep into the ground, starting from the soil surface, especially when soils are dry. Hammer-driven probes may be needed. It is sometimes necessary to excavate down to the next depth with the shovel or bucket auger, and start the probe from there, or obtain the sample in stages. Always be careful not to include soil or material from other layers. Some slotted probes will pick up soil along the bottom of the slot from other layers as they are pulled out, for example.
+
+In rocky or otherwise difficult ground, hand-probe cores may be difficult or impossible to obtain. An alternative procedure is the \textbf{soil pit}\index{soil pit}, basically a hole in the ground with at least one vertical side which can be made with a shovel. Get your samples from the sides of the pit using a spoon or ice cream scoop, again taking care to make each sample representative of the entire layer sampled. If there are rocks or gravel present, do you best to collect a representative sample of fine earth from the top to the bottom of the layer.
+
+\section{Sampling for bulk density}
+
+Bulk density\index{bulk density} is the oven-dry weight per unit volume of undisturbed soil. Measuring it requires taking a sample of known volume, drying it, and weighing it. The utility of this measurement depends on your purpose. If you are trying to measure tonnage of carbon in a given depth of soil, or change in that tonnage, then density is a needed factor. If you are trying to gauge change due to management, without the need to establish tonnage, then density measurements may be superfluous. Because of their lack of accuracy or consistency relative to carbon analysis using dry combustion, density measurements may merely introduce noise to a program of monitoring change in soil carbon due to management. Density also reflects porosity or compaction, and changes over time in density can reflect improvement or deterioration in soil structure.
+
+A simple and practical bulk density core sampler can be made out of a section of sturdy steel pipe about 3 inches or so in diameter. Exhaust pipe works well. Cut a section about 4 or 5 inches long, making sure the cuts are true and square. With a file or grinder, bevel the edge on one end from the outside of the pipe toward the inside at about a 45-degree angle. The inside edge should be square and reasonably sharp.
+
+To take a bulk density sample, use a trowel or putty knife to prepare a flat plane surface of undisturbed soil near the midpoint of the layer you want to sample, at one of the grid locations. This can be a horizontal or vertical surface. With the block of wood and a hammer, tap the corer square into the flat surface of soil, at least 2 or 3 inches.
+
+If the soil surface inside the ring moves inward as you tap, you are deforming the soil and may need to use the clod method described below.
+
+\begin{figure}
+\centering
+\includegraphics[width = 4in]{pics/bulkdensity.jpg}
+\caption{A bulk density sampler tapped into a flat surface beginning at 28 cm below the soil surface. The next steps are to measure the inset of the soil surface inside the sampler and calculate the volume, then label the sample bag and excavate the sampler.}
+\end{figure}
+
+The depth of the ring determines the soil volume contained. With a short metric steel rule, take four measurements, evenly spaced around the ring, of the distance between the outer or blunt edge of the ring to the soil surface within. The best steel rule to use is one with a movable slide or shirt-pocket clip, as you are often working in the bottom of a dark pit and can't read it accurately. The clip allows you to probe the depth from the rim of the sampler to the soil surface, and then remove the rule to read the distance in millimeters.
+
+The average of these four measurements in centimeters, subtracted from the length of your corer, gives you the length of your bulk sample. Multiply this by the cross-sectional area of your corer ($\pi r^{2}$, where $r$ is the inside radius of your corer) to get your volume. Using centimeters, your result will be in cubic centimeters, which simplifies the bulk density calculation. For example, my corer, made from a section of 3-inch steel pipe, has a cross-sectional area of 41.51 cm and a length of 11.0 cm. After I tap it into a flat surface of soil, it protrudes 5.65 cm (average of four measurements around the circle). The length of my sample is 5.35 cm $\times$ 41.51 = 222.0785 which I round to 222.1 cubic centimeters. \textbf{Write the volume in cubic centimeters, as well as the plot, grid position, and layer identifier, on your sample bag with a permanent marker.}
+
+It is best to take these measurements \textbf{before} excavating your corer. In some situations you may want to seal the top of your corer with your sample bag and a rubber band so that no soil or other material leaves or enters the corer during excavation.
+
+Now you are ready to excavate the corer. With the trowel or sharpened putty knife, carefully excavate the buried sharp end of the corer, so as not to interfere with the soil within it, until you can cut off the sample, flat and flush along the sharp edge of the corer (a serrated knife works well for this). Now you have a known cylindrical volume of undisturbed, uncompacted soil. Push it out of the corer and into your labeled sample bag, taking care to collect the entire sample. This may take a bit of practice.
+
+\subsection{The clod method}
+
+If you cannot take a sample using the this method because of gravel and rocks, or because the soil fractures or crumbles easily when the corer is tapped in, you may need to use the clod method.\index{clod method}\endnote{This clod method is taken from the USDA Soil quality test kit guide, prepared by John Doran.}
+
+At one of the grid sampling locations, prepare a level plane surface of undisturbed soil at the needed depth, about midway down in the layer you are sampling. With the trowel, dig a bowl-shaped hole about 3 inches deep and 5 inches in diameter. Avoid compacting the soil around the hole while digging. Place all of the soil and gravel removed from the hole in a plastic bag.
+
+Put the soil in the plastic bag through a 2-mm sieve and into a clean bucket. Put the sieved soil back into the plastic bag, and keep the gravel and rocks in the sieve. (If the soil is too wet to sieve, you'll need to save it for later, when you can air dry it, sieve it, and account for the volume of gravel by displacement in a graduated beaker or cylinder.)
+
+Carefully line the hole with plastic wrap, leaving excess around the edge of the hole. Place the sieved rocks and gravel carefully in the center of the hole atop the plastic wrap, making sure they do not protrude above the level of the soil surface.
+
+Using the 140-cc syringe to keep track of the volume, fill the hole with water up to the level of the soil surface. The volume of water required is the volume of the sample you have in the plastic bag. Write this volume in cubic centimeters on your sample bag.
+
+\subsection{Drying and weighing}
+
+Most soil labs will dry and weigh samples to calculate bulk density. You may also do this yourself, after the field sampling, if you have a gram scale accurate to .1 gram.
+
+After the sample has been thoroughly air-dried, spread it on a microwaveable paper plate of known weight. (Large samples may require more than one paper plate.) Weigh the sample. Dry the sample thoroughly using a microwave at full power for 1--3 minutes depending on the size of the sample. If you smell smoke, you are overdoing it, combusting organic matter! Weigh the sample again, and record the weight. Microwave it again for 15 to 30 seconds. When it no longer loses weight after a short drying cycle in the microwave, it is dry. Record the weight of the dry sample in grams, less the weight of the paper plate of course. The bulk density\index{bulk density} $D$ is
+
+\begin{equation}D = \frac{W}{V}\end{equation}
+
+\noindent where $W$ is the weight in grams and $V$ is the volume in cubic centimeters (even including sieved-out rocks; see below).
+
+It is important that the bulk density sample be as similar as possible to the carbon samples. If there are rock fragments larger than 2 mm in your bulk density sample, sieve out the rocks over 2mm in diameter and note the volume of the rocks using displacement with a graduated cylinder or beaker. However, and this is important, \textbf{do not subtract the volume of the sieved rocks over 2mm in diameter from your sample volume, but do not include them when weighing your oven-dried sample.} In effect, this assumes that there is no carbon in these rocks, which may or may not be true, but unless you want to grind and analyze the rocks, you are better off just using the lower bulk density figure that results from not weighing the rocks in calculating the tons per hectare of carbon.
+
+
+\section{Resampling}
+
+It is common to wait three years or more between the baseline or initial sampling for soil carbon, and the first resampling.\index{resampling} Weather can influence soil carbon accumulation or loss, and the longer you wait, the greater chance you have of detecting change due to management.
+
+Resampling can follow most of the procedures outlined in this chapter. As mentioned, density may not be important or useful if you are measuring change in soil carbon due to management, but it is important if you want to quantify tonnage of soil carbon.
+
+Depending on your purpose, remonitoring may differ from the baseline monitoring as follows:
+
+\begin{enumerate}
+\item To measure change, you will compare the mean carbon content for a plot at baseline with its mean carbon content on resampling, by layer of course. Thus it is not necessary to analyze samples within a plot separately, in order to assess within-plot variation. It is a good idea to take multiple cores as before, but they can be composited or bulked for analysis. For example, if you took 8 samples from the top layer during the baseline sample and analyzed them separately, you may now mix them thoroughly in a bucket and send off one or two subsamples of this mixture for analysis.
+
+\item If density is important to your measurement, and if the bulk density of a layer has changed more than a percentage point or two, you may want to engage in a bulk density correction.\index{bulk density correction}
+
+\end{enumerate}
+
+\section{Correcting for changes in bulk density}
+
+However, if the bulk density has changed\label{bd correx}\index{bulk density correction} more than a couple of percent, there is a wrinkle. We are now no longer comparing equal masses of soil.
+
+Let's say the resampling, again to a depth of 15 cm, shows 2.0 percent carbon but with a bulk density of 1.15. Following the calculation below, we get 34.5 tons per hectare, a gain of only .525 tons per hectare per year. But because of the decrease in bulk density\index{bulk density}, we are sampling a lesser mass of soil than in the original sampling.
+
+One strategy is to measure bulk density first on resampling, where possible. Compare it to the initial measurement, and then adjust sampling depths (and thus volume of soil sampled) so that you are sampling the same mass of soil. Use this equation to calculate the new volume that you should sample:
+
+\begin{equation}V_{2} = \frac{V_{1}\times D_{1}}{D_{2}}\end{equation}
+
+\noindent where $V_{1}$ is the initial volume (depth) sampled, $V_{2}$ is the new volume (depth) to be sampled, and $D_{1}$ and $D_{2}$ are the first and second bulk densities measured. You can then divide the new volume by the area to get the new depth.
+
+In cases where bulk density cannot be measured first, correction factors can be calculated for this eventuality.\endnote{For more detailed explanations about calculating carbon when bulk density changes, see pages 137--38 in Rattan Lal's volume, \textit{Assessment methods for soil carbon} (2001), and Appendix 16 in Willey and Chameides 2007.} Where bulk density has decreased, it involves sampling somewhat deeper, so that an equal mass of soil is compared, and adding the carbon in the additional depth.
+
+Where bulk density increases, correction will involve resampling the bottom of the sampled layers and subtracting the carbon measured.
+
+If bulk density changes, and you did not adjust your depth of sampling, be sure to qualify your results by reporting it. This is the most practical route.
+
+
+\chapter{Getting your samples analyzed}
+
+In the U.S., many land-grant universities have soil and forage analysis labs that perform the dry combustion\index{dry combustion} test using CN (carbon-nitrogen) or CNS (carbon-nitrogen-sulfur) analyzers, such as those made by Leco, Perkins-Elmer, Elementar, or Carlo-Erba. Many of these labs also do some sample preparation such as drying, sieving, and grinding.
+
+Private soil labs are less likely to do elemental analysis, because it is more of a research analysis than a guide to chemical application.
+
+\section{Sample preparation}
+
+\textbf{Air dry your samples as soon as possible.} Just as plowing and tilling soil exposes soil organic matter to rapid oxidation by common bacteria, taking a sample of moist soil and keeping it in a sealed bag will result in oxidation.\index{sample drying} One common method is to spread each sample on a paper or plastic plate or piece of clean paper, with the labeled plastic bag underneath or stapled to the plate or paper, and when it is dry, return the sample to the labeled bag for shipping to a lab.
+
+Laboratories vary in their sample preparation\index{sample preparation} procedures, which can have significant impacts on the reported results. The drying, sieving, and grinding aren't all the same. Some labs may not sieve samples, thus including significant root fragments or litter, which are likely to boost carbon content.
+
+A common standard is to air-dry soil samples, crush them or grind them enough to pass through a 2-mm sieve to remove gravel and root fragments, and then pulverize the sample in a grinder or mortar and pestle. Some researchers or labs may remove visible plant and root fragments by hand after sieving, but others do not.
+
+One option is to do the sample preparation yourself. This will require a mortar and pestle (Coorstek 750ml porcelain mortars are often used) and a 2-mm sieve. After breaking up the clods in the sample so that they can be sieved, spread the sieved sample on a sheet of paper and collect a \textbf{carefully representative subsample} for fine pulverization in the mortar. This subsample is then subsampled for the elemental analyzer. So careful homogenization and subsampling is critical to accurate measurements.
+
+For detecting change, the most important thing is \textbf{consistency between measurements.}
+
+\section{Storing samples}
+
+In measuring change, you don't get any data until your resampling is analyzed. It is possible to store your dried, bagged baseline samples in a cool, dark, dry place, and only send them for analysis along with the samples from the resampling. This strategy has the advantage that the sample preparation and analysis at the lab is likely to be more consistent when the work is done at one time, rather than with a gap of three or more years.
+
+\section{Split sampling to test your lab}
+
+Mix a core sample very thoroughly in a bucket. With alternating spoonfuls, bag it as two or more samples, labeled separately. Keep a record that this is a split sample.
+
+\begin{enumerate}
+
+\item Send both samples to the same lab, and compare the results. This is one way to sample a lab's work.
+
+\item Send each sample to a different lab.
+
+\item Have one sample tested, and store its twin in a refrigerator or cool, dark, dry place for a year, which should not change the carbon content provided that the sample is thoroughly dried before storage. Then send it to the same lab that tested the first sample.
+
+\end{enumerate}
+
+\section{U.S. labs that do elemental analysis or dry combustion test\index{dry combustion}\label{soil labs}}
+
+Use the internet to get more information. It is a good idea to call to get an idea of what their testing procedures are, and sample preparation. Some labs, for example, will routinely try to separate organic and inorganic carbon for you, especially if the pH is above 7 or an acid test indicates the presence of carbonates, and are unaccustomed to running total carbon tests on all samples.
+
+Most labs accept samples by mail or package service.
+
+\begin{tabular}{ll}
+\textbf{institution}&\textbf{web address}\\
+Oklahoma State&\texttt{www.soiltesting.okstate.edu}\\
+Utah State&\texttt{www.usual.usu.edu}\\
+Oregon State&\texttt{cropandsoil.oregonstate.edu/cal}\\
+University of Idaho&\texttt{www.agls.uidaho.edu/asl/}\\
+\end{tabular}
+
+
+\chapter{Data}
+
+\epigraph{Our results suggest that grassland soil C changes can be precisely quantified using current technology [soil sampling and dry combustion] at scales ranging from farms to the entire nation.}{Rich Conant and Keith Paustian,\\``Spatial variability of soil organic \\carbon in grasslands'' (2002)}
+
+\noindent What you do with your data depends on your purpose, why you are measuring soil carbon change.
+
+If you are only interested in quantifying the tons of carbon added, may want only the mean or average. This is a drastic simplification of the data. While it may appear to be precise, and to tell a simple story, much is being left out. Averages leave out lots of relevant detail: the average human has approximately one ovary and one testicle. Keep all your raw data. You may want it later.
+
+\section{Carbon calculations}
+
+After you have gotten analysis results from your lab, you may make some basic calculations. But it is only after resampling that you will have any idea of change in soil carbon.
+
+To calculate mass of carbon in a single stratum (layer of soil in a horizontal stratum), it takes three factors, one of which is density. Use this formula:
+
+\begin{equation}C_{T}=C_{F} \times D \times V\end{equation}
+
+\noindent where $C_{T}$ is total carbon for the layer in metric tons, $C_{F}$ is the fraction of carbon (percentage carbon divided by 100), $D$ is density, and $V$ is volume of the soil layer in cubic meters.
+
+For example, let's say our plots in this stratum average 1.8 percent carbon, our bulk density is 1.20, and we're sampling to a depth of 15 cm on a 12-hectare field. Since there are 10,000 square meters in a hectare, our volume is 120,000 $\times$ .15 m, or 18,000 cubic meters. So our total carbon for the layer is .018 $\times$ 1.2 $\times$ 18,000 = 388.8 tons, 32.4 tons per hectare.
+
+If we resample this field after four years and our plots average 2.0 percent carbon, and the bulk density is still 1.20, we now have 432 tons C or 36 tons to the hectare, an average gain of 3.6 tons per hectare, or .9 ton C per hectare per year.
+
+A shortcut equation giving tons of carbon per hectare is:
+
+\begin{equation}T=Th_{cm} \times D \times C_{percent}\end{equation}
+
+\noindent where $T$ is tons of carbon per hectare, $Th_{cm}$ is the thickness of the sampled layer in centimeters, $D$ is density, and $C_{percent}$ is the percentage of carbon. If testing several layers, add the tonnage in each layer to get a total tonnage for the layers sampled.
+
+You can then qualify your results with confidence intervals and standard error if you wish (see statistics chapter) and/or get some qualified help with statistical processing.
+
+\section{Replicability}\index{replicability}
+
+These three factors---volume of the layer sampled, bulk density, and percentage of total carbon---are critical for a replicable, consistent measurement of tonnage. There are two additional factors as well.
+
+\begin{enumerate}
+
+\item The volume of the layer sampled means you must be accurate in measuring and sectioning soil probe cores, and get an even representation of the layer in each core. Do not just scoop up a sample of soil from somewhere close to the depth desired.
+
+\item Good bulk density measurements are needed if you want tonnage. The bigger the better, and two are better than one.
+
+\item Sample drying, subsampling, and elemental analysis (dry combustion) should be accurate and consistent.
+
+\item Permanent location of sample grid sites is critical. Consumer-grade GPS receivers are helpful but not sufficient to locate transects markers. If you, or someone else, can't find the plot or microsite, the measurement is not replicable or repeatable. Multiple permanent stakes or markers, use of metal detectors to find steel stakes, and measurement and triangulation to permanent landmarks, and the mapping of each site are needed for replicability.
+
+\item Open yet secure data. If you are using proprietary or secret methods, or if you don't publish raw data with clear indications of how the data was obtained, your measurement is not as likely to be replicable.
+\end{enumerate}
+
+\section{Greenhouse gas emissions}
+
+Many people are justifiably concerned about the totality of greenhouse gas emissions from agriculture and ranching. They may ask, so what if you're sequestering carbon in the soil. What about all the methane\index{methane}\index{nitrous oxide}\index{greenhouse gases} that your livestock are producing? Or the nitrous oxide? Or what other kinds of carbon dioxide emissions are you causing?
+
+Greenhouse gases---so called because though they are transparent, they absorb radiation in a variety of wavelengths, and re-emit a portion of it as heat---include water vapor (the principal greenhouse gas), carbon dioxide or CO$_{2}$, methane or CH$_{4}$, and nitrous oxide or N$_{2}$O.
+
+If you wish to account for your emissions of some of these other gases, there is a rudimentary calculator in Excel format, targeted to grass-based cattle producers, at \texttt{soilcarboncoalition.org/calculator1}
+
+However, it can be difficult or expensive to quantify rather than model emissions in your particular case, and water vapor is not included in the calculator. Likewise the rate of methane oxidation by soil bacteria is not typically measured.
+
+
+\section{Data entry and mapping\index{mapping}}
+
+Many labs will offer to email data from multiple samples to you in a spreadsheet form such as Microsoft Excel. \index{Excel}This can save you a lot of data entry if you have many plots. Some labs can begin with a spreadsheet that you submit, that could contain your plot and sample identifiers as well as dates and GPS coordinates where the sample was taken.
+
+To display your data on Google Earth\index{Google Earth} or Google Maps, you need a .kml file, which is a text file in the Keyhole Markup Language format.\index{kml file} There are a number of software tools that can help you convert spreadsheet files into .kml and display data as points with information balloons on Google Earth or Maps. Google Fusion Tables are a handy way to map multiple data points. See also \texttt{zonums.com} for a free spreadsheet-to-kml tool.
+
+Data interpretations may vary and change. So it is a good idea to keep raw data, and any information that might show how it was arrived at.
+
+
+\section{The Soil Carbon Challenge\index{Soil Carbon Challenge}\label{challenge}}
+
+\epigraph{Merely measuring something has an uncanny tendency to improve it.}{Paul Graham}
+
+\noindent You may also submit your results to the Soil Carbon Coalition, a nonprofit organization dedicated to advancing the practice, and spreading awareness of the opportunity, of turning atmospheric carbon into soil organic matter. The Soil Carbon Coalition can present your data and display your results on a Google map.
+
+See \texttt{soilcarboncoalition.org/changemap.htm} for the map, which shows measured instances of soil carbon change in the same location.
+
+Where monitoring is facilitated and led by a trained third party monitor, in accordance with this guide, the Soil Carbon Coalition will accept entries for the Soil Carbon Challenge, a public, international, yet localized competition to see how fast and how well land managers can turn atmospheric carbon into water-holding, fertility-enhancing soil organic matter.
+
+The purpose of the Soil Carbon Challenge is to enable us to learn how to better manage the carbon cycle, which greatly influences water cycling on land. It is not designed as a ``fix'' for climate change, but to enable learning on the part of both land managers and larger society based on results and measurements, rather than on various kinds of advocacy or solutioneering.
+
+If we measure, pay attention to, and publicly recognize the conversion of atmospheric carbon dioxide into soil carbon, it will assist a fundamental transformation---to managing \emph{for} what we want and need (soil organic matter) instead of \emph{against} what we don't want (e.g. fossil fuel emissions).
+
+Because of this purpose the Challenge does not often use a high number of plots for each property---in some cases only one---a biased selection---usually chosen to be fairly representative of a major portion of the property being managed.
+
+See \texttt{soilcarboncoalition.org/challenge} for current information.
+
+
+\chapter{Forms and checklist}
+
+Following are some forms and a checklist that should tell you at a glance what is involved in measuring soil carbon change, and help keep you on track through the process.
+
+\section{Basic equipment}
+\small \index{equipment}
+\begin{tabular}{ll}
+\textbf{item}&\textbf{description}\\
+sharpshooter shovel&a long narrow-bladed shovel\\
+soil probe (smaller diameter)&for extracting soil cores\\
+hammer probe&for sampling more difficult soils\\
+bulk density corer&short section of 3-inch pipe, outside beveled on one end\\
+hammer, wood block&for tapping in bulk density corer\\
+140 cc syringe, plastic wrap&for measuring clod volume\\
+6-inch steel rule, metric&for measuring bulk density cores\\
+2-mm sieve&for sample prep and bulk density clod method\\
+plastic or canvas sheets&for piling dirt from holes\\
+plastic containers&for collecting and mixing samples\\
+serrated knife and sharpened putty knife&for cutting soil\\
+sharp pointing trowel&for shaping and excavation\\
+sample bags&quart ziplocs work well\\
+permanent markers&for labeling sample bags\\
+camera&for photographing plots\\
+GPS receiver&for mapping plots\\
+sighting compass/inclinometer&for laying out plots\\
+meter sticks&for measuring cores and laying out plots\\
+200-foot or 50-meter tape&for laying out plots and fixing location\\
+clipboard and data forms&for recording data\\
+
+\end{tabular}
+\normalsize
+
+
+
+\section{Monitoring plan}
+\label{monitoringplan} \index{monitoring plan}
+\small
+\begin{tabular}{|lll|}\hline
+\rule[-1cm]{0mm}{1cm}Name of parcel:\rule[0mm]{4cm}{0mm}&acres/hectares: \rule[0mm]{2cm}{0mm}&sampling \#:\rule[0mm]{1.2cm}{0mm}\\ \hline
+\multicolumn{3}{|l|}{\rule[-10mm]{0mm}{10mm}Purpose. Why?}\\ \hline
+\multicolumn{3}{|l|}{\rule[-.7cm]{0mm}{.7cm}Other monitoring:}\\ \hline\hline
+major soil types/zones & \vline \rule[0mm]{2mm}{0mm}approx. size or \% & \vline \rule[0mm]{2mm}{0mm}number of plots\\ \hline
+&\vline &\vline \\ \hline
+&\vline &\vline \\ \hline
+&\vline &\vline \\ \hline
+&\vline &\vline \\ \hline
+&\vline &\vline \\ \hline
+&\vline &\vline \\ \hline
+&\vline &\vline \\ \hline
+&\vline &\vline \\ \hline
+&\vline &\vline \\ \hline
+\multicolumn{3}{r}{\rule[-4mm]{0mm}{12mm}\textbf{TOTAL PLOTS:}\rule[-1mm]{2cm}{.5pt}}\\ \hline
+
+\textbf{FIRST SOIL LAYER} & top (cm):\rule[-.1cm]{1cm}{.5pt} & bottom (cm):\rule[-.1cm]{1cm}{.5pt}\\
+samples per plot:\rule[-.1cm]{1cm}{.5pt} & \multicolumn{2}{l|}{number of analyses:\rule[-.1cm]{1cm}{.5pt}}\\ \hline\hline
+
+\textbf{SECOND SOIL LAYER} & top (cm):\rule[-.1cm]{1cm}{.5pt} & bottom (cm):\rule[-.1cm]{1cm}{.5pt}\\
+samples per plot:\rule[-.1cm]{1cm}{.5pt} & \multicolumn{2}{l|}{number of analyses:\rule[-.1cm]{1cm}{.5pt}}\\ \hline\hline
+
+\textbf{THIRD SOIL LAYER} & top (cm):\rule[-.1cm]{1cm}{.5pt} & bottom (cm):\rule[-.1cm]{1cm}{.5pt}\\
+samples per plot:\rule[-.1cm]{1cm}{.5pt} & \multicolumn{2}{l|}{number of analyses:\rule[-.1cm]{1cm}{.5pt}}\\ \hline
+
+\multicolumn{3}{l}{\rule[0mm]{0mm}{6mm}add analyses for layers to get Total carbon analyses per plot:\rule[-.1cm]{1cm}{.5pt}} \\
+\multicolumn{3}{r}{\rule[-.3cm]{0mm}{.3cm}multiply by number of plots to get \textbf{TOTAL carbon analyses:}\rule[-.1cm]{2cm}{.5pt}}\\ \hline
+
+\multicolumn{3}{|c|}{\rule[-.3cm]{0mm}{.3cm}\textbf{Number of bulk density tests per plot}}\\
+\multicolumn{3}{|l|}{first layer: \rule[-.1cm]{1cm}{.5pt} second layer: \rule[-.1cm]{1cm}{.5pt} third layer:\rule[-.1cm]{2cm}{.5pt} TOTAL: \rule[-.1cm]{1cm}{.5pt}}\\
+\multicolumn{3}{|l|}{\hfill multiply by number of plots to get \textbf{TOTAL bulk density tests:}\rule[-.1cm]{1cm}{.5pt}}\\ \hline \hline
+
+\multicolumn{3}{|c|}{\rule[-.3cm]{0mm}{.3cm}\textbf{Unit costs quoted by soil lab:}\rule[-.1cm]{6cm}{.5pt}} \\
+\multicolumn{3}{|l|}{C analysis: \rule[-.1cm]{1.5cm}{.5pt} bulk density: \rule[-.1cm]{1.5cm}{.5pt} \hspace{1cm} sample prep: \rule[-.1cm]{1.5cm}{.5pt}}\\ \hline
+
+\multicolumn{3}{r}{\rule[0cm]{0mm}{14mm}\textbf{TOTAL ESTIMATED LAB COSTS:}\rule[-1mm]{4cm}{.5pt}}\\
+\end{tabular}
+\normalsize
+\clearpage
+\section{Monitoring checklist}
+\label{checklist} \index{checklist}
+
+\begin{enumerate}
+
+\item Map your site, with boundaries and possible horizontal strata. Google Earth is a good tool for this, but a paper map works too. (\textit{baseline only})
+
+\item Fill out the monitoring plan on page \pageref{monitoringplan}. Depending on your purpose, use sampling calculators (page \pageref{spreadsheet tools}) to help you decide on the number of plots for each stratum, and the number of samples per plot, and where in the grid they will be.
+
+\item Collect any necessary equipment and supplies, including those needed for any additional monitoring. Where underground utilities are a possibility, call before you dig.
+
+\item Choose plot sites, using your maps and monitoring plan as a guide. Give each one a unique identifier. (\textit{baseline only})
+
+\item At each plot, record its location with GPS, compass, and tape measure. Draw a map of the plot area (\textit{baseline only})
+
+\item Do any observations and data collection for soil surface monitoring. Photograph the plot center hoop from chest height, labeled with plot identifier, latitude and longitude, and date writ large on side 1 of the plot data form.
+
+\item If you want to measure tonnage of carbon, take bulk density samples and bag them, writing the volume in cubic centimeters clearly on each bag.
+
+\item Record optional soil info on plot data form.
+
+\item Lay out the sample locations you will need using tape and meter sticks, and take sample cores. Use the grid diagram on page \pageref{EZgrid} for layout and sample locations.
+
+\item Replace soil that you have excavated, pick up your tools.
+
+\item Spread your samples on plastic picnic plates, with sample bags labeled and stapled to them, to air dry.
+
+\item Pack your air-dried samples in a box and send them to your lab.
+
+\item If you are doing your own bulk density tests, do them and record results.
+
+\item Record and process data when you get results back from the lab.
+
+\end{enumerate}
+
+\section{Plot data form}
+
+The following two pages \index{plot data form}can become a two-sided form for recording data. On one side, write the plot identifier, latitude and longitude (decimal degrees is best if you plan to work with Google Earth or .kml files), and date. Write large, in permanent marker, and photograph this form with the soil surface. Use the other side to record plot and sample data.
+
+Because of the common failure of digital cameras to record black text on white paper in bright sunlight, it is best to copy these data forms onto grey or tinted paper (or card stock).
+
+When you get lab results, you can enter these, and then enter the data into a spreadsheet for analysis and mapping. But hang onto your plot data forms, even after you enter the data in a spreadsheet or web application. They are the most secure form for data, and the raw data is often much richer and more informative than the statistical interpretations such as mean and standard error.
+
+\clearpage
+%\thispagestyle{empty}
+\footnotesize
+\noindent plot data sheet for soil carbon, side 1: write large, and photograph this sheet with soil surface\\ \index{plot data form}
+\HUGE
+\noindent plot identifier
+
+\vspace{6em}
+
+\noindent latitude
+
+\vspace{6em}
+
+\noindent longitude
+
+\vspace{6em}
+
+\noindent date
+\normalsize
+
+
+\clearpage
+%\thispagestyle{empty}
+\small  \index{plot data form}
+\begin{center}
+\begin{tabular}{|l|l|}
+\multicolumn{2}{c}{\textbf{Plot data sheet for soil carbon, side 2}}\\
+\hline
+Plot ID:\hspace{4em}Stratum: &Project: \hspace{3em}  Your name:\\
+\rule[0in]{3.12in}{0in}&\rule[0in]{3.12in}{0in}\\
+\hline \hline
+
+\multicolumn{2}{|l|}{\rule[-10mm]{0mm}{10mm}location notes}\\ \hline
+\multicolumn{2}{|l|}{\rule[-8mm]{0mm}{8mm}slope, aspect, vegetation}\\ \hline
+\rule[-8mm]{0mm}{8mm}moisture&\rule[-8mm]{0mm}{8mm}rocks and roots\\ \hline
+\rule[-8mm]{0mm}{8mm}structure&\rule[-8mm]{0mm}{8mm}carbonates\\ \hline
+\rule[-8mm]{0mm}{8mm}consistency&\rule[-8mm]{0mm}{8mm}aggregate stability\\ \hline
+\rule[-8mm]{0mm}{8mm}texture&\rule[-8mm]{0mm}{8mm}infiltration\\ \hline
+\end{tabular}
+
+\vspace{.6em}
+
+\begin{tabular}{|c||c||c|c||c|}\hline
+sample ID&lab results&top&bottom&litter-soil boundary, comments\\ \hline
+\rule[0mm]{0mm}{8mm} \rule[0in]{.9in}{0in}&&\rule[0in]{.5in}{0in}&\rule[0in]{.5in}{0in}&\rule[0in]{3in}{0in}\\ \hline
+\rule[0mm]{0mm}{8mm}& & & & \\ \hline
+\rule[0mm]{0mm}{8mm}& & & & \\ \hline
+\rule[0mm]{0mm}{8mm}& & & & \\ \hline
+\rule[0mm]{0mm}{8mm}& & & & \\ \hline
+\rule[0mm]{0mm}{8mm}& & & & \\ \hline
+\rule[0mm]{0mm}{8mm}& & & & \\ \hline
+\rule[0mm]{0mm}{8mm}& & & & \\ \hline
+\rule[0mm]{0mm}{8mm}& & & & \\ \hline
+\rule[0mm]{0mm}{8mm}& & & & \\ \hline
+\rule[0mm]{0mm}{8mm}& & & & \\ \hline
+\rule[0mm]{0mm}{8mm}& & & & \\ \hline
+\rule[0mm]{0mm}{8mm}& & & & \\ \hline
+
+\end{tabular}
+\end{center}
+\normalsize
+\chapter{Signal vs. noise (statistics)}
+
+\epigraph{It is far better to have an approximate answer to the right question than an exact answer to the wrong one.}{John Tukey}
+
+\noindent Because of variations in soil carbon and rates of change from place to place, and because we can't and shouldn't combustion test all soil for carbon content, estimating soil carbon accurately (or change in soil carbon) is a sampling problem involving statistical probabilities. This chapter may give you some understanding and background for the statistical issues that a sampling design should take into account. The first section below is the basics, and then comes the harder math, which you can get help with from others.
+
+Use what you want. As mentioned previously (page \pageref{purpose}), the sources of uncertainty depend on your purpose. Statistical uncertainty, while it may be quantified more easily than other kinds, may not be the major source of uncertainty or risk in achieving your purpose or objective with soil carbon measurement. If your purpose is feedback to management or to find out what's possible in improving soil carbon at a few strategic locations, statistical knowledge may not be helpful.
+
+\section{Sampling and probability}
+
+Three tax returns, randomly chosen, are unlikely to give you an accurate view of the average personal income in a town, its spread, or its rate of change. So too with soil sampling. According to widely accepted statistical theory and practice, the confidence that the mean or average of your samples is close to the overall mean of what you are sampling increases in proportion to the square root of the number of samples.
+
+With 16 samples you will be twice as confident as with 4. The probability that the average of your samples is a fluke decreases by half. With 64 samples you will be 4 times as confident.
+
+The other factor that affects confidence is variability. The more variable the percentage or change in soil carbon, for example, the more samples you will need to reduce the probability that the mean of your samples differs significantly from the mean of what you are sampling.
+
+Each sample takes time and labor to obtain, and money to have it analyzed. Thus there is a tradeoff between high levels of confidence or statistical power on the one hand, and trouble and expense on the other. Where you draw this line depends on your purpose in sampling.
+
+When we are \textbf{measuring change} in soil carbon, the sample or data point is the change or difference in the carbon content at a single plot over a time span. Some of the statistical discussions in the current literature about measuring soil carbon can be confusing because they are oriented around measuring carbon at one point in time.
+
+Variability, and the number of samples or data points, are the factors that govern statistical accuracy and confidence. When measuring change, one of the best ways to detect a signal over the ``noise'' of spatial variation is to measure carbon content in a small area (the plot) over time. The closer you can get to comparing apples to apples, the easier and more accurate the measurements.
+
+\section{Standard error}
+
+Perhaps the most widely used description of the margin of error in sampling is the standard error or sampling error ($SE$), often described as the standard error of the mean, or the standard deviation of all possible sample means of the given sample size:
+
+\begin{equation}SE = \frac{\sigma}{\sqrt{n}}\end{equation}
+
+\noindent where $\sigma$ is the standard deviation of all the possible soil cores in the layer (for which $s$, the standard deviation of the sample, is the best estimate) and $n$ is the number of soil cores. For example, suppose I take 8 core samples in a plot, have them analyzed separately for carbon, with the following results.
+\begin{center}
+\begin{tabular}{|l|r|}\hline
+sample ID&carbon percentage\\ \hline\hline
+MF3-1&1.2\\ \hline
+MF3-4&1.3\\ \hline
+MF3-7&2.1\\ \hline
+MF3-10&2.4\\ \hline
+MF3-16&1.8\\ \hline
+MF3-19&1.6\\ \hline
+MF3-22&1.5\\ \hline
+MF3-25&2.3\\ \hline\hline
+mean&1.775\\ \hline
+$s$&.4528\\ \hline
+\end{tabular}
+\end{center}
+
+\noindent using the above formula, the standard error is $\frac{.4528}{\sqrt{8}}$ or .16. The more samples you take, the smaller the standard error or sampling error.
+
+
+\section{Coefficient of variation}
+
+In statistics, a standard measure of variability is the \index{coefficient of variation}\label{CV}coefficient of variation ($CV$). This is the ratio of the standard deviation ($\sigma$) to the mean ($\mu$). It is sometimes expressed as a percentage.
+
+\begin{equation}CV = \frac{\sigma}{\mu}\end{equation}
+
+\noindent The calculators referenced on page \pageref{spreadsheet tools} will give you an idea of the number of samples you need for a given confidence level, given the coefficient of variation. Note that the required sample size does not depend on the area of land sampled, but on the variation.
+
+However, for measuring soil carbon change, our sample datum is not the concentration or mass of carbon in a given volume of soil, but the \textbf{change} in that concentration or mass. What this means is that you cannot know the coefficient of variation in advance of the second sampling, because that is when you get your first data on change. If your sampling intensity is less than you want, you cannot go back and correct it.
+
+Presampling, taking a few samples and having them analyzed before finalizing a sampling design and intensity, may give you an idea of the coefficient of variation for soil concentrations, but will not necessarily give you a grip on the variability of soil carbon change.\index{presampling}
+
+Therefore, the resolution or confidence of the results from your sampling design cannot be predicted in advance. You must establish plots or benchmarks with a reasonable number of samples within each plot, and accept whatever variability occurs in change over time, along with the level of confidence that it allows.
+
+In many areas of study where statistics are used, anything less than 95\% confidence (p $\le$ .05) is not considered ``statistically significant.'' But this is an arbitrary standard, and many soil studies use a more relaxed 90\% or p $\le$ .1. Statistical significance\index{statistical significance} depends on your purpose. Are you seeking feedback for your land management, trying to show a possibility, trying to sell something, or are you trying prove something beyond all reasonable doubt to a jury of your peers?
+
+\section{Comparing paired samples}
+
+If you understand some statistics, use the paired sample t-test \index{paired sample t-test}to qualify your results. Here three examples.
+
+\begin{center}
+\begin{tabular}{|r|r|r|r|}
+\multicolumn{4}{c}{\textbf{Bar 6 Ranch, north half}}\label{bar6}\\ \hline
+plot&$T_{0}$&$T_{1}$&$\Delta$\\ \hline\hline
+1& 36.2& 38.6& 2.4\\ \hline
+2& 32.0& 34.2& 2.2\\ \hline
+3& 26.9& 28.0& 1.1\\ \hline
+4& 41.3& 42.0& 0.7\\ \hline
+5& 39.1& 39.8& 0.7\\ \hline
+6& 40.1& 42.5& 2.4\\ \hline
+7& 37.6& 37.5& -0.1\\ \hline
+8& 29.0& 31.1& 2.1\\ \hline
+9& 31.4& 33.1& 1.7\\ \hline
+10& 30.9& 31.4& 0.5\\ \hline
+11& 42.3& 44.9& 2.6\\ \hline
+12& 18.1& 18.3& 0.2\\ \hline\hline
+mean& 33.74& 35.12&1.375 \\ \hline
+$s$& 7.01& 7.42& 0.964\\ \hline
+
+\end{tabular}
+\end{center}
+
+\noindent where $T_{0}$ is the calculated average tons of carbon per hectare for each plot to a 15 cm depth at the baseline in 2005, $T_{1}$ is the same from resampling in 2009, $\Delta$ is the change, and $s$ is the standard deviation across the plots. The estimate we're after is that of change. For the paired sample test, use this formula:
+
+\begin{equation}\mu_{d} = \bar{d} \pm t_{.025}\left(\frac{s_{d}}{\sqrt{n}} \right)\end{equation}
+
+\noindent where $\mu_{d}$ is the probable range of the mean change in carbon, $\bar{d}$ is the mean change across plots, $t_{.025}$ is the critical value of $t$ for a 95\% confidence interval and 11 degrees of freedom (in this case 2.2), $s_{d}$ is the standard deviation of the change across all plots, and $n$ is the number of plots. Plugging in the numbers, we get $\mu_{d}$ = 1.375 $\pm$ .613, or a probable increase in carbon ranging from .762 to 1.988 tons per hectare.
+
+Here's an example with fewer plots and more variability:
+
+\begin{center}
+\begin{tabular}{|r|r|r|r|}
+\multicolumn{4}{c}{\textbf{Muggy Farm}}\\ \hline
+plot&$T_{0}$&$T_{1}$&$\Delta$\\ \hline\hline
+1& 54.6& 61.2& 6.6\\ \hline
+2& 65.8& 68.2& 2.4\\ \hline
+3& 45.2& 44.1& -1.1\\ \hline
+4& 65.7& 66.1& 0.4\\ \hline
+5& 39.5& 45.8& 6.3\\ \hline
+6& 40.1& 42.5& 2.4\\ \hline
+7& 57.1& 63.2& 6.1\\ \hline
+8& 32.1& 32.3& 0.2\\ \hline\hline
+mean& 50.02& 52.9&2.912 \\ \hline
+$s$& 12.65& 13.33& 3.06\\ \hline
+
+\end{tabular}
+\end{center}
+
+\noindent Plugging in the numbers here, again with a 95\% confidence interval, and $t$ at 2.3646 with 7 degrees of freedom, we get 2.912 $\pm$ 2.558, or a probable increase of .354 to 5.47 tons of carbon per hectare in the layer sampled. Though this farm had over twice the average increase of the ranch, there were fewer plots, and more variation in the changes, giving considerably less resolution of the change. (The coefficient of variation for the changes on the ranch is 70\% versus 105\% for the farm.)
+
+With the 95\% confidence interval, on Muggy Farm we can assert that there has been at least a .354 ton increase. If we relax the confidence interval to 90\% (a 10\% probability that our estimate misses the actual value), we get 2.912 tons per hectare $\pm$ 2.0494, or .8626 tons to 4.96 tons, a slightly narrower range.
+
+
+\section{Stratified sampling}\label{strat}
+
+Chances are, the soil to be sampled varies both by depth and by horizontal location. With soil, we can set up zones or strata that are both vertical (depth) and horizontal (for example, different management, vegetation, slope, soil type).
+
+If you are trying to estimate personal income or change in income in a town, you can gain resolution and possibly reduce the needed number of samples by sampling neighborhoods separately that are likely to differ. You may choose to sample the wealthy, middle class, and poorer neighborhoods separately, which may reduce the variability encountered, tightening your overall estimate. The means of these samples can then be combined on a weighted basis to give an estimate for the whole town.
+
+Suppose that a farm consists of 754 acres of farmed ground and 246 acres of pasture (1,000 acres total). Because the pasture was not tilled, highly productive, and well managed, we expect soil carbon to increase significantly faster there than in the farm ground. We put in 7 plots on the farm ground and 5 on the pasture (not a proportional representation), and found these results after 4 years (figures in tons per hectare).
+\small
+\begin{center}
+\begin{tabular}{|r|r|r|r|}\hline
+\multicolumn{4}{|c|}{\textbf{754 farmed acres}}\\ \hline
+plot&$T_{0}$&$T_{1}$&$\Delta$\\ \hline
+1&36.2&36.4&0.2\\ \hline
+2&34.3&35.2&0.9\\ \hline
+3&28.6&29.8&1.2\\ \hline
+4&29.7&30.8&1.1\\ \hline
+5&31.2&32.2&1.0\\ \hline
+6&33.1&33.9&0.8\\ \hline
+7&37.8&38.9&1.1\\ \hline
+
+\multicolumn{3}{|r|}{mean}&.90\\ \hline
+\multicolumn{3}{|r|}{$s$}&.337\\ \hline\hline
+\multicolumn{4}{|c|}{\textbf{246 acres pasture}}\\ \hline
+8&34.5&37.4&2.9\\ \hline
+9&39.0&41.8&2.8\\ \hline
+10&24.3&27.5&3.2\\ \hline
+11&21.9&23.7&1.8\\ \hline
+12&27.9&30.2&2.3\\ \hline
+\multicolumn{3}{|r|}{mean}&2.60\\ \hline
+\multicolumn{3}{|r|}{$s$}&.552\\ \hline\hline
+\multicolumn{3}{|r|}{\textbf{nonweighted mean}}&1.609\\ \hline
+\multicolumn{3}{|r|}{\textbf{nonweighted $s$}}&.969\\ \hline
+\end{tabular}
+\end{center}
+\normalsize
+Using the formula as above, the overall mean result is an increase of 1.609 tons, $\pm$ .616 tons, or a range from .99 to 2.22 tons, with a 95\% confidence interval. This calculation assumes (unfairly) that each plot has equal weight on the end result. The spread is fairly high.
+
+However, if we treat the farm ground and the pasture as two separate areas, we get a different picture. For the farm ground alone, we get a mean of .9 tons $\pm$ .311 tons, or .59 to 1.21 tons. For the pasture alone, we get 2.6 tons $\pm$ .686 or 1.91 to 3.29 tons.
+
+These can be combined into a weighted mean as follows:
+
+\begin{equation}\bar{x}_w = \frac{\displaystyle\sum\limits_{i=0}^n w_i x_i}{\displaystyle\sum\limits_{i=0}^n w_i}\end{equation}
+
+
+\noindent where $\bar{x}_{w}$ is the weighted mean, $n$ is the number of plots, and $w_i$ is weight factor for each plot. This routine gives each plot a weight factor in proportion to the acreage it represents and divides by the total of the weight factors. The weighted mean change across our plots is 1.318 tons.
+
+To get the standard error is a bit trickier. Using the formula from the National Institute of Standards and Technology, the weighted standard deviation $sd_{w}$ is:
+
+\begin{equation}sd_{w} = \sqrt{\frac{\displaystyle\sum\limits_{i=0}^n w_{i}(x_{i} - \bar{x}_{w})^{2}}{\frac{(n - 1) \displaystyle\sum\limits_{i=0}^n w_{i}}{n}}}\end{equation}
+
+\noindent where $n$ is the number of plots, $w_{i}$ is the weight assigned to each plot, $x_{i}$ is the mean change for each plot, and $\bar{x}_{w}$ is the weighted mean change across all plots. A spreadsheet makes these calculations easier.
+
+If we combine the plot differences on a weighted basis, according to acreage of each stratum, we get 1.318 tons $\pm$ .543, or .776 to 1.86 tons per hectare. Because the levels of change in the farmed ground and the pasture differ, we gain resolution by treating the strata separately. Our weighted estimate is both different from, and tighter than, the unstratified overall estimate.
+
+\section{Help with statistics}
+
+There are many statistical analysis software packages. The spreadsheet program Microsoft Excel\index{Excel} has a Data Analysis Toolpak that is free to install (choose Tools, Add-Ins from the menu), and can do many basic statistical tests such as the paired sample t-test for comparing plot means between samplings.
+
+Because the statistical significance of a collection of samples depends on the number of samples rather than on the area of the field or farm that you are sampling, sampling intensity\index{sampling intensity} (the number of samples) should go up if you expect a high degree of variability, and/or you need high resolution or accuracy.
+
+The Microsoft Excel\index{Excel} worksheets available from the USDA-ARS can be helpful in getting a feel for sampling intensity, and its relation to variability:\label{spreadsheet tools}\index{sampling calculators}
+
+\texttt{usda-ars.nmsu.edu/monit\_assess/}
+
+Appendix 2 of USDA's \textit{Soil Change Guide} has information and instructions for this Multi-Scale Sampling Requirements Evaluation Tool (MSSRET). The MSSRET tool asks for \textit{rho} which is Pearson's correlation, the degree of correlation between a plot's before and after readings. For paired plot sampling, it is reasonable to set \textit{rho} fairly high, such as .9 or above.
+
+\texttt{soils.usda.gov/technical/soil\_change/}
+
+In addition, Winrock International has a sampling calculator that presupposes bulked samples for each plot, and allows you to plan stratifications.
+
+\texttt{www.winrock.org/ecosystems/tools.asp}
+
+\noindent While these worksheets are not specifically targeted at measuring differences over time between fixed plots, they are helpful in calculating the number of plots, and the number of samples per plot, needed for a given confidence interval, minimum detectable difference (MDD), and ranges of variation.
+\begin{center}
+\S
+\end{center}
+\noindent The use of statistical analysis or complicated math and formulas does not guarantee accuracy. If your plots are not located randomly, much of statistical theory and analysis does not apply. Where you locate plots may have more influence on the accuracy of your results than the variability of soil carbon change, about which relatively little is known or quantified. And in many cases, where your objective goes beyond mere enumeration of tons of carbon, statistical uncertainty may be overshadowed by other sources of uncertainty or risk.
+
+Much of conventional or parametric statistics requires or assumes that the measurable characteristics of populations are normally distributed, especially when $n$, the number of samples, is below 30 or so. For example, the heights of adult humans, if charted as a histogram or frequency chart, will closely resemble the bell curve or normal distribution, with a hump around the mean.
+
+\begin{figure}
+\centering
+\includegraphics[width = 4in]{pics/normdist.pdf}
+\caption{A histogram or frequency chart of the soil carbon change data from page \pageref{bar6}. The number of plots recording change at levels one or two standard deviations above and below the mean are represented by the bars. Note that this representation reduces and simplifies the data.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width = 4in]{pics/normdist2.pdf}
+\caption{An even further reduction of the data from page \pageref{bar6} sees it as indicating a normal or bell-curve distribution, which may not be a warranted assumption given the relatively small sample size.}
+\end{figure}
+
+But because there has been relatively little measurement of soil carbon change, we really don't know what typical distributions or parameters might be. Particularly when the number of samples is low, nonparametric statistical tests, such as the Wilcoxon rank sum test, may be more appropriate than t-tests.\index{nonparametric statistics}
+
+As usual, it comes down to purpose. If your purpose is to demonstrate possibility or create a desired future, a high degree of statistical accuracy or confidence may not be your top priority.
+
+\chapter{References}
+
+Some of the documents referenced here, plus spreadsheet resources for sampling design and carbon calculations, can be accessed from:
+
+\texttt{soilcarboncoalition.org/measuring\_soil\_C}
+
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{.6em}
+\begin{flushleft}
+\small
+\linespread{1.0}
+
+Conant, Richard, and Keith Paustian. 2002. Spatial variability of soil organic carbon in grasslands: implications for detecting change at different scales. \textit{Environmental Pollution} 116: S127-S135.
+
+Conant, Richard, Gordon Smith, and Keith Paustian. 2003. Spatial variability of soil carbon in forested and cultivated sites: implications for change detection. \textit{J. Environ. Qual.} 32:278--286.
+
+Deming, W. Edwards. 1950. \textit{Some theory of sampling.} John Wiley and Sons.
+
+Deming, W. Edwards. 1975. On probability as a basis for action. \textit{The American Statistician} 29(4):146--152. \texttt{www.stat.osu.edu/~jas/stat600601/articles/article1.pdf}
+
+Deming, W. Edwards. 1994. \textit{The new economics: For industry, government, education.} MIT.
+
+Doran, John. 1999. \textit{Soil Quality Test Kit Guide.} USDA-NRCS. Available from \texttt{soils.usda.gov/sqi/assessment/test\_kit.html}
+
+Ellert, B. H., H. H. Janzen, and T. Entz. 2002. Assessment of a method to measure temporal change in soil carbon storage. \textit{Soil Sci. Soc. Am. J.} 66:1687--1695.
+
+Gadzia, Kirk, and Todd Graham. 2006. \textit{Bullseye! Targeting your rangeland health objectives.} Santa Fe, NM: The Quivira Coalition. \texttt{quiviracoalition.org}
+
+Izaurralde, R. C. 2005. Measuring and monitoring soil carbon change at the project level. In R. Lal, N. Uphoff, B. A. Stewart, and D. O. Hansen, eds., \textit{Climate Change and Global Food Security}, pp. 467--500. Boca Raton: Taylor \& Francis Group.
+
+Jones, Christine. 2008. Liquid carbon pathway unrecognised. \texttt{http://soilcarboncoalition.org/soluble\_carbon}
+
+Jones, Christine. 2010. Soil carbon---can it save agriculture's bacon? \texttt{http://soilcarboncoalition.org/files/JONES-SoilCarbon\&Agriculture(18May10).pdf}
+
+Keeling, Charles D. 1998. Rewards and perils of monitoring the earth. \textit{Annual Review of Energy and the Environment} 23:25--82. Available at \texttt{scrippsco2.ucsd.edu/publications/keeling\_autobiography.pdf}
+
+Kellogg, Charles. E. 1938. Soil and society. In \textit{Soils and Men: Yearbook of Agriculture, 1938}, pp. 863--886. United States Dept. of Agriculture. Also available at \texttt{http://soilcarboncoalition.org/files/soilandsociety.pdf}
+
+Kellogg, Charles E. 1941. \textit{The Soils that Support Us: An introduction to the study of soils and their use by men.} Macmillan.
+
+Lal, Rattan, J. M. Kimble, R. F. Follett, and B. A. Stewart, eds. 2001. \textit{Assessment Methods for Soil Carbon.} Boca Raton: CRC Press.
+
+Lal, Rattan. 2003. Carbon sequestration in dryland ecosystems. \textit{Environmental Management} 33(4): 528--544.
+
+Lane, Nick. 2002. \textit{Oxygen: The molecule that made the world.} Oxford University Press.
+
+McKenzie, N., Ryan, P., Fogarty, P., and Wood, J. 2000. Sampling, measurement, and analytical protocols for carbon estimation in soil, litter, and coarse woody debris. Australian Greenhouse Office, Technical Report 14.\\ \texttt{www.greenhouse.gov.au/ncas/reports/tr14final.html}
+
+National Research Council. 1994. \textit{Rangeland health: New methods to classify, inventory, and monitor rangelands.} Washington, DC: National Academy Press.
+
+Orchard, Charles, and Chris Mehus. 2001. Management by monitoring. \textit{Rangelands} 23(6): 28--32. \texttt{www.landekg.com/rangelands.pdf}
+
+Pearson, Timothy, Sarah Walker, and Sandra Brown. 2006. \textit{Sourcebook for land use, land-use change and forestry projects.} Winrock International.
+
+Pellant, M., P. Shaver, D. A. Pyke, and J. E. Herrick. 2005. \textit{Interpreting indicators of rangeland health}, version 4. Technical Reference 1734-6. U.S. Department of the Interior, Bureau of Land Management, National Science and Technology Center, Denver, CO. BLM/WO/ST-00/001+1734/REV05.
+
+Potter, Christopher, Steven Klooster, Alfredo Huete, and Vanessa Genovese. 2007. Terrestrial carbon sinks for the United States predicted from MODIS satellite data and ecosystem modeling. \textit{Earth Interactions} 11:13.
+
+Schumacher, Brian. 2002. \textit{Methods for the determination of total organic carbon (TOC) in soils and sediments.} United States Environmental Protection Agency. \texttt{www.epa.gov/esd/cmb/research/papers/bs116.pdf}
+
+Stolbovoy, V., L. Montanarella, N. Filippi, A. Jones, J. Gallego, and G. Grassi. 2007. \textit{Soil sampling protocol to certify the changes of organic carbon stock in mineral soil of the European Union.} Version 2. European Commission, Joint Research Centre.
+
+Tugel, Arlene J., Skye A. Wills, and Jeffrey E. Herrick. 2008. \textit{Soil change guide: Procedures for soil survey and resource inventory}, Version 1.1. USDA, Natural Resources Conservation Service, National Soil Survey Center, Lincoln, NE. Available from \texttt{soils.usda.gov/technical/soil\_change/index.html}
+
+U.S. Department of Agriculture. 2004. \textit{Soil survey laboratory methods manual.} Rebecca Burt, editor. Soil Survey Investigations Report No. 42, version 4.0. Pages 17--29 describe standard methods of preparing soil samples. Available from \texttt{soils.usda.gov/technical/lmm/}
+
+U.S. Department of Agriculture. 1938. \textit{Soils and Men: Yearbook of Agriculture.} A fabulous resource. This book shows what American agricultural policy might have been.
+
+Waksman, Selman. 1936. \textit{Humus: Origin, Chemical Composition, and Importance in Nature.} Baltimore: Williams \& Wilkins. A definitive treatment, including histories of important discoveries in the place of soil organic matter in carbon cycling. Available from \texttt{soilcarboncoalition.org/files/Waksman-Humus.pdf}
+
+Willey, Zach, and Bill Chameides, eds. 2007. \textit{Harnessing farms and forests in the low carbon economy: How to create, measure, and verify greenhouse gas offsets.} Duke University Press.
+
+\end{flushleft}
+
+\theendnotes
+\addcontentsline{toc}{chapter}{Notes}
+\clearpage
+\makeevenhead{myheadings}{\thepage}{\footnotesize{Measuring soil carbon change}}{}
+\makeoddhead{myheadings}{}{\footnotesize Index}{\thepage}
+
+\printindex
+
+\end{document}
